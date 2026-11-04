@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: neev-facade-screening
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_API_KEY
+        sync: false
+      - key: PORT
+        value: "8000"
+      - key: ENVIRONMENT
+        value: "production"
+      - key: SAM_MODEL
+        value: "sam-3.1"
+      - key: WONDER_MODEL
+        value: "muse-wonder-1.0"
