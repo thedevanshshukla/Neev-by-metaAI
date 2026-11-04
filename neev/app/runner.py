@@ -48,10 +48,12 @@ MAX_PHRASES_PER_RUN = 32
 
 def _run_unet_detections(raw: bytes) -> list[dict[str, Any]]:
     import io
+    import logging
     import numpy as np
     from PIL import Image
     from neev.adapters.crack_unet import CrackUNetAdapter
 
+    logger = logging.getLogger("neev.runner")
     try:
         pil_img = Image.open(io.BytesIO(raw)).convert("RGB")
         unet = CrackUNetAdapter()
@@ -70,7 +72,8 @@ def _run_unet_detections(raw: bytes) -> list[dict[str, Any]]:
                 "mask_encoding": "one_bit",
             })
         return kept
-    except Exception:
+    except Exception as exc:
+        logger.error("U-Net crack segmentation failed during inspection: %s", exc, exc_info=True)
         return []
 
 

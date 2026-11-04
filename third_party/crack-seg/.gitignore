@@ -3,8 +3,11 @@
 .venv/
 *.pyc
 __pycache__/
-checkpoints/
+.cache/
+checkpoints/*
+!checkpoints/unet_v3.pth
 *.pth
+!checkpoints/unet_v3.pth
 things_to_fix.md
 # local notes (kept out of the public repo)
 notes/

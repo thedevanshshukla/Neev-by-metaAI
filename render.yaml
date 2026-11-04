@@ -16,3 +16,4 @@ services:
         value: "sam-3.1"
       - key: WONDER_MODEL
         value: "muse-wonder-1.0"
+

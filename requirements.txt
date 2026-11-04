@@ -24,6 +24,6 @@ torchvision>=0.15.0
 transformers>=4.38.0
 safetensors>=0.4.0
 
-# Configuration & Protocol Parsers
+# Configuration & SAM Protocols
 PyYAML>=6.0
 meta-sam-parser>=0.1.0

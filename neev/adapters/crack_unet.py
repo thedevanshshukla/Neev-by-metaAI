@@ -71,7 +71,7 @@ class CrackUNetAdapter:
         self.min_area = min_component_area_px
 
         if not self.ckpt_path.exists():
-            raise FileNotFoundError(f"Checkpoint not found at {self.ckpt_path}")
+            self._ensure_checkpoint()
 
         if device is None:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -83,6 +83,20 @@ class CrackUNetAdapter:
         self.settings = SystemSettings.load_from_yaml(str(self.cfg_path))
         self.model, self.features = load_unet_checkpoint(str(self.ckpt_path), self.device)
         self.predictor = SlidingWindowPredictor(self.model, self.settings, self.device)
+
+    def _ensure_checkpoint(self) -> None:
+        """Download checkpoint from Hugging Face if not present locally."""
+        if self.ckpt_path.exists():
+            return
+        self.ckpt_path.parent.mkdir(parents=True, exist_ok=True)
+        hf_url = "https://huggingface.co/ishaan1402/crack-seg/resolve/main/unet_v3.pth"
+        try:
+            import urllib.request
+            urllib.request.urlretrieve(hf_url, str(self.ckpt_path))
+        except Exception as exc:
+            raise FileNotFoundError(
+                f"Checkpoint not found at {self.ckpt_path} and auto-download from {hf_url} failed: {exc}"
+            ) from exc
 
     def segment(
         self,
