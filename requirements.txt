@@ -1,15 +1,29 @@
 # Neev: AI Building Facade Defect Screening Platform
 # Production Runtime Dependencies
 
+# Web & API Framework
 fastapi>=0.115.0
 uvicorn[standard]>=0.34.0
 python-multipart>=0.0.20
+pydantic>=2.10.0
 httpx>=0.28.0
-pillow>=10.0.0
+requests>=2.31.0
+
+# Numerical & Scientific Computing
 numpy>=1.26.0
 scipy>=1.12.0
-requests>=2.31.0
-pydantic>=2.10.0
+scikit-image>=0.21.0
+
+# Image Processing & Computer Vision
+pillow>=10.0.0
+opencv-python-headless>=4.8.0
+
+# Deep Learning Runtimes
 torch>=2.0.0
 torchvision>=0.15.0
-opencv-python-headless
+transformers>=4.38.0
+safetensors>=0.4.0
+
+# Configuration & Protocol Parsers
+PyYAML>=6.0
+meta-sam-parser>=0.1.0
