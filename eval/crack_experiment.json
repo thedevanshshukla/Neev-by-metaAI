@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "name": "crack-prompt-pilot",
+  "_comment": "Preparation only. DO NOT execute until crack_wall labels + verified negatives exist in eval/benchmark_v1.json.",
+  "benchmark": "eval/benchmark_v1.json",
+  "iou_threshold": 0.5,
+  "category": "crack",
+  "labelling_required": {
+    "positives": ["crack-wall-closeup-01"],
+    "negatives_verify_first": ["villa-01", "terraces-01", "portrait-outlier-01"],
+    "held_out_ambiguous": ["damage-corner-01", "chawl-frontal-01", "chawl-corner-01", "lane-oblique-01"]
+  },
+  "prompts": [
+    {"id": "baseline", "text": "crack in wall"},
+    {"id": "C-07", "text": "wall crack"},
+    {"id": "C-08", "text": "cracked wall"},
+    {"id": "C-09", "text": "crack"},
+    {"id": "C-10", "text": "plaster crack"}
+  ],
+  "images": [
+    "photo_Sample/crack_wall.jpeg",
+    "photo_Sample/images.jpeg",
+    "photo_Sample/img5.jpeg",
+    "photo_Sample/outlier1.jpeg"
+  ],
+  "cached_cells": [
+    "photo_Sample/images.jpeg :: crack in wall",
+    "photo_Sample/img5.jpeg :: crack in wall"
+  ],
+  "new_requests": 18,
+  "price_per_image_usd": 0.0025,
+  "estimate_usd": 0.045,
+  "commands": [
+    "python live/sweep_sam31.py photo_Sample/crack_wall.jpeg photo_Sample/images.jpeg photo_Sample/img5.jpeg photo_Sample/outlier1.jpeg --phrase \"crack in wall\" --phrase \"wall crack\" --phrase \"cracked wall\" --phrase \"crack\" --phrase \"plaster crack\" --confirm-live --overlays --parser-wheel <wheel>",
+    "python live/evaluate.py --decode-masks --parser-wheel <wheel>"
+  ],
+  "success_rule": "A variant wins only if, on the same labelled set, it raises recall at non-worse precision AND its overlay detections visually correspond to real crack traces. More boxes alone is not better.",
+  "limitations": [
+    "One positive image: preliminary evidence only, no generalization claim.",
+    "Box IoU at 0.5 is harsh on thin diagonal traces; inspect near-misses manually (see C-05).",
+    "Mask IoU reported only if ground-truth masks are drawn; none exist yet.",
+    "Spalling detections count as crack false positives unless discounted per the annotation guide (see C-11)."
+  ]
+}

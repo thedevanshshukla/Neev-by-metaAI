@@ -1,0 +1,302 @@
+{
+  "created_utc": "2026-11-02T20:29:37.178804+00:00",
+  "height": 1086,
+  "image_name": "dv2.png",
+  "inspection_id": "28c9ad312990",
+  "mime": "image/png",
+  "quality_metrics": {
+    "laplacian_var": 1339.24,
+    "mean_luma": 93.17,
+    "min_side_px": 1086,
+    "saturated_frac": 0.004
+  },
+  "quality_warnings": [],
+  "run": {
+    "cache_hits": 5,
+    "cells": [
+      {
+        "phrase": "crack",
+        "run_id": "63015c92790f",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 1448,
+          "y0": 0,
+          "y1": 1086
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "f184abef5434",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 828,
+          "y0": 0,
+          "y1": 621
+        },
+        "view": "r0c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "606a479badf5",
+        "status": "cached",
+        "tile_box": {
+          "x0": 620,
+          "x1": 1448,
+          "y0": 0,
+          "y1": 621
+        },
+        "view": "r0c1",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "7bafecfb98f2",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 828,
+          "y0": 465,
+          "y1": 1086
+        },
+        "view": "r1c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "b33cbd98eb86",
+        "status": "cached",
+        "tile_box": {
+          "x0": 620,
+          "x1": 1448,
+          "y0": 465,
+          "y1": 1086
+        },
+        "view": "r1c1",
+        "view_kind": "tile"
+      }
+    ],
+    "confirm_live": true,
+    "created_utc": "2026-11-03T05:07:08.283795+00:00",
+    "failures": 0,
+    "live_calls": 0,
+    "merged": {
+      "crack": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 3,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [
+          {
+            "box": {
+              "x0": 144,
+              "x1": 388,
+              "y0": 265,
+              "y1": 364
+            },
+            "frame_height": 621,
+            "frame_width": 828,
+            "mask_encoding": "one_bit",
+            "mask_height": 100,
+            "mask_payload": "!!!!#CA!`M7V$G(X?^m4b&96?3_iM{%B7?(d1Y3+@YgpKinz4JamLY@L@HTtSG&D]*L[jW23{[f4U:_77McWJ=0UHR^2VFe49ht)M45+BClFe(Lh/^U.j)X+Bu6O?GP6K!?*^?FZ]Xn0:QJ5G+lZf",
+            "mask_width": 245,
+            "mv_id": "mv0",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "f184abef5434",
+              "source_sha256": "9b34c32a00044215dcef87fbc646b88321ad585b3020839e64a9e372d1a96344",
+              "tile_box": {
+                "x0": 0,
+                "x1": 828,
+                "y0": 0,
+                "y1": 621
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "run_id": "f184abef5434",
+            "source_box": {
+              "x0": 144,
+              "x1": 388,
+              "y0": 265,
+              "y1": 364
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 828,
+              "y0": 0,
+              "y1": 621
+            },
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 350,
+              "x1": 397,
+              "y0": 180,
+              "y1": 233
+            },
+            "frame_height": 621,
+            "frame_width": 828,
+            "mask_encoding": "one_bit",
+            "mask_height": 54,
+            "mask_payload": "!!!!!WDJgtj3TaC`SjIwb8{MH(&fPl.9QC1nZ4[uUwKwMLIVO9ZBK8J7F[YfNT6!tzS@",
+            "mask_width": 48,
+            "mv_id": "mv1",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "f184abef5434",
+              "source_sha256": "9b34c32a00044215dcef87fbc646b88321ad585b3020839e64a9e372d1a96344",
+              "tile_box": {
+                "x0": 0,
+                "x1": 828,
+                "y0": 0,
+                "y1": 621
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "run_id": "f184abef5434",
+            "source_box": {
+              "x0": 350,
+              "x1": 397,
+              "y0": 180,
+              "y1": 233
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 828,
+              "y0": 0,
+              "y1": 621
+            },
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 210,
+              "x1": 258,
+              "y0": 336,
+              "y1": 464
+            },
+            "frame_height": 621,
+            "frame_width": 828,
+            "mask_encoding": "one_bit",
+            "mask_height": 129,
+            "mask_payload": "!!!!!RD@dfFBzdv'Z@FX^S2rKcci]rqo]T/5MT5.sW${kOTo`4lxvaiq*1k-/",
+            "mask_width": 49,
+            "mv_id": "mv2",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "f184abef5434",
+              "source_sha256": "9b34c32a00044215dcef87fbc646b88321ad585b3020839e64a9e372d1a96344",
+              "tile_box": {
+                "x0": 0,
+                "x1": 828,
+                "y0": 0,
+                "y1": 621
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "run_id": "f184abef5434",
+            "source_box": {
+              "x0": 210,
+              "x1": 258,
+              "y0": 336,
+              "y1": 464
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 828,
+              "y0": 0,
+              "y1": 621
+            },
+            "view": "r0c0",
+            "view_kind": "tile"
+          }
+        ],
+        "parse_errors": [],
+        "phrase": "crack",
+        "rejected": [],
+        "source_sha256": "9b34c32a00044215dcef87fbc646b88321ad585b3020839e64a9e372d1a96344",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "63015c92790f",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "run_id": "f184abef5434",
+            "status": "cached",
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": "606a479badf5",
+            "status": "cached",
+            "view": "r0c1",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": "7bafecfb98f2",
+            "status": "cached",
+            "view": "r1c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": "b33cbd98eb86",
+            "status": "cached",
+            "view": "r1c1",
+            "view_kind": "tile"
+          }
+        ]
+      }
+    },
+    "model": "sam-3.1",
+    "phrases": [
+      "crack"
+    ],
+    "projected_cost_usd": 0.0,
+    "strategy": "multiview",
+    "view_stats": {
+      "reinspect": {
+        "cached": 0,
+        "failed": 0,
+        "live": 0,
+        "planned": 0,
+        "uncached": 0
+      },
+      "tile": {
+        "cached": 4,
+        "failed": 0,
+        "live": 0,
+        "planned": 4,
+        "uncached": 0
+      },
+      "whole": {
+        "cached": 1,
+        "failed": 0,
+        "live": 0,
+        "planned": 1,
+        "uncached": 0
+      }
+    }
+  },
+  "sha256": "9b34c32a00044215dcef87fbc646b88321ad585b3020839e64a9e372d1a96344",
+  "status": "complete",
+  "stored_image": "original.png",
+  "width": 1448
+}

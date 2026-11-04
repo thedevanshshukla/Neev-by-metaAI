@@ -1,0 +1,35 @@
+# Secrets and local config
+.env
+
+# Experiment traces (requests/responses); keep out of git, they can be large
+runs/*
+!runs/inspections/
+cache.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.hypothesis/
+*.egg-info/
+backups/
+
+# Sample media and downloaded data (large, sometimes licensed)
+samples/
+*.mp4
+*.mov
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Scratch, logs, and temporary work
+scratch/
+scratch_*.py
+p0_*.txt
+pytest-of-*/
+*.log

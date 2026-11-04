@@ -1,0 +1,2376 @@
+{
+  "audit": {
+    "actual_architecture_executed": "baseline",
+    "cache_usage": "cached",
+    "fallback_reason": null,
+    "inference_status": "partial",
+    "model_id": "sam-3.1",
+    "model_version": "3.1",
+    "selected_architecture": "baseline",
+    "wonder_mode": "advisory"
+  },
+  "created_utc": "2026-11-02T21:41:29.965325+00:00",
+  "height": 1792,
+  "image_name": "dm1.png",
+  "inspection_id": "174d4b204d85",
+  "mime": "image/png",
+  "quality_metrics": {
+    "laplacian_var": 1031.61,
+    "mean_luma": 178.27,
+    "min_side_px": 1792,
+    "saturated_frac": 0.0006
+  },
+  "quality_warnings": [],
+  "run": {
+    "cache_hits": 20,
+    "cells": [
+      {
+        "phrase": "crack",
+        "run_id": "46b5d6f650ea",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "crack in wall",
+        "run_id": "fb7b225b1e8c",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "damaged wall",
+        "run_id": "ed0ee40822df",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "exposed steel bar",
+        "run_id": "375edc53c2b1",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "building",
+        "run_id": "3f8cbc117f99",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "window",
+        "run_id": "4bf449657a13",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "column",
+        "run_id": "0201e6001667",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "floor slab",
+        "run_id": "c87c5cc9d05a",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "balcony",
+        "run_id": "b5246d64bf64",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "parapet",
+        "run_id": "ba3695db9f17",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "open ground floor",
+        "run_id": "c465b2146e44",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "shop shutter",
+        "run_id": "ca94d9b824f2",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "water tank",
+        "run_id": "924d13f6d576",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "air conditioner unit",
+        "run_id": "39e5a2524123",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "hoarding",
+        "run_id": "16ba2d88948a",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "car parked under building",
+        "run_id": "564959a86d7a",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1792
+        },
+        "view": "whole",
+        "view_kind": "whole"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "318062c052a1",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 1372,
+          "y0": 0,
+          "y1": 1024
+        },
+        "view": "r0c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "145b36c28854",
+        "status": "cached",
+        "tile_box": {
+          "x0": 1028,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1024
+        },
+        "view": "r0c1",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "604ecf781bf5",
+        "status": "cached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 1372,
+          "y0": 768,
+          "y1": 1792
+        },
+        "view": "r1c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack",
+        "run_id": "cb0e268929c2",
+        "status": "cached",
+        "tile_box": {
+          "x0": 1028,
+          "x1": 2400,
+          "y0": 768,
+          "y1": 1792
+        },
+        "view": "r1c1",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack in wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 1372,
+          "y0": 0,
+          "y1": 1024
+        },
+        "view": "r0c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack in wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 1028,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1024
+        },
+        "view": "r0c1",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack in wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 1372,
+          "y0": 768,
+          "y1": 1792
+        },
+        "view": "r1c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack in wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 1028,
+          "x1": 2400,
+          "y0": 768,
+          "y1": 1792
+        },
+        "view": "r1c1",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "damaged wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 1372,
+          "y0": 0,
+          "y1": 1024
+        },
+        "view": "r0c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "damaged wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 1028,
+          "x1": 2400,
+          "y0": 0,
+          "y1": 1024
+        },
+        "view": "r0c1",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "damaged wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 0,
+          "x1": 1372,
+          "y0": 768,
+          "y1": 1792
+        },
+        "view": "r1c0",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "damaged wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 1028,
+          "x1": 2400,
+          "y0": 768,
+          "y1": 1792
+        },
+        "view": "r1c1",
+        "view_kind": "tile"
+      },
+      {
+        "phrase": "crack",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 821,
+          "x1": 1077,
+          "y0": 523,
+          "y1": 779
+        },
+        "view": "re0",
+        "view_kind": "reinspect"
+      },
+      {
+        "phrase": "crack in wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 821,
+          "x1": 1077,
+          "y0": 523,
+          "y1": 779
+        },
+        "view": "re0",
+        "view_kind": "reinspect"
+      },
+      {
+        "phrase": "damaged wall",
+        "run_id": null,
+        "status": "uncached",
+        "tile_box": {
+          "x0": 821,
+          "x1": 1077,
+          "y0": 523,
+          "y1": 779
+        },
+        "view": "re0",
+        "view_kind": "reinspect"
+      }
+    ],
+    "confirm_live": false,
+    "created_utc": "2026-11-04T16:14:46.898656+00:00",
+    "failures": 0,
+    "live_calls": 0,
+    "merged": {
+      "air conditioner unit": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "air conditioner unit",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "39e5a2524123",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "balcony": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "balcony",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "b5246d64bf64",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "building": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "building",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "3f8cbc117f99",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "car parked under building": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "car parked under building",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "564959a86d7a",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "column": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "column",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "0201e6001667",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "crack": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 14,
+          "rejected": 0,
+          "suppressed": 12
+        },
+        "kept": [
+          {
+            "box": {
+              "x0": 195,
+              "x1": 1253,
+              "y0": 709,
+              "y1": 1041
+            },
+            "frame_height": 1792,
+            "frame_width": 2400,
+            "mask_encoding": "one_bit",
+            "mask_height": 322,
+            "mask_payload": "!!!!&1D?Bh]tAb)4)XIaH56#&&wT&`Gk%Dl`RvwYaW`'rz!l7dSBhB^jX!I/(p:kC1`tFXhx+OKq(^3ydgEp{#*kS{F41yjx@j2%U@eR$k)'gSdWFLzeT@?OJ^5-Q8`z'{rl!UBZF0^jPAJ'tA=z=0_RB8kwOSl:0bQ+M-rlB/U-`L+U/N]jtiTfX^LVvkIEXljpoq]jEfHHFj9$s{]2W]0_0-qo1txID&[mijxIXloqqbyadfrdjape5/KtP7%@+^cD5xfduW(Xj=*_ap)GdDlW_1v{2Q7+S%407-*dEn+63j44QYBVo06bbQ+TO.4apJWi/.IFS&]R1R_.*%@Z?y!V:UdQ9({VS!ZjS0/3=9cGLV'TUxOdA4n0URegCJTkAso&&-`%U$kpR00%DD4UAkK0Fgo[tZT74P*7NdbWtEj=z:-sb%`C@ssUVCoc9`5r)",
+            "mask_width": 1024,
+            "mv_id": "mv0",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "46b5d6f650ea",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "run_id": "46b5d6f650ea",
+            "source_box": {
+              "x0": 195,
+              "x1": 1253,
+              "y0": 709,
+              "y1": 1041
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1792
+            },
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "box": {
+              "x0": 412,
+              "x1": 467,
+              "y0": 45,
+              "y1": 291
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 247,
+            "mask_payload": "!!!!!jD+i=ygIJvrD#tW!T._X]ak%%2szInR[d]qe$6(iRkn'n5H@vCEvkU=%m.v4q)*F'2F]zm7OdfVITN'Q3/!ZJ",
+            "mask_width": 56,
+            "mv_id": "mv10",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "318062c052a1",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "run_id": "318062c052a1",
+            "source_box": {
+              "x0": 412,
+              "x1": 467,
+              "y0": 45,
+              "y1": 291
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 1372,
+              "y0": 0,
+              "y1": 1024
+            },
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 207,
+              "x1": 352,
+              "y0": 258,
+              "y1": 739
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 482,
+            "mask_payload": "!!!!#nB!r%?Ied2p_Q]X5h&z!vw*Agih^vAchs{9!rjMzrs$d?.j@w2#4]yM'ni9-.M*Z=r_Qpsyn+o{'@Y@7Sf$M{*@TcIUaBzg5/1q={v*mZa3?veJ[`%%+sFgst'o-3O%F'=a=oH{[El1suQ=#FVpND!?+EJSkrTFy(`Epz%pHrwE9rVV&n4Jc2.:i2y53FGAvdxep",
+            "mask_width": 146,
+            "mv_id": "mv12",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "318062c052a1",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "run_id": "318062c052a1",
+            "source_box": {
+              "x0": 207,
+              "x1": 352,
+              "y0": 258,
+              "y1": 739
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 1372,
+              "y0": 0,
+              "y1": 1024
+            },
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 180,
+              "x1": 284,
+              "y0": 0,
+              "y1": 925
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 926,
+            "mask_payload": "!!!!%2C2__JtM+x2AE37mW(D=30.P/^mIJ`?y7]{]([5iTay3a$@W4e1w_iM56St$3[?%MP`I$G#t$WJHMrlEBq.a@`2DfoOs1(wzI/g1{LiD0$m@*2hvrmscF$4AKA.k{6Ifk_JnPDQ(DO/&-xwt0BECS@F:#!ZGxepRHn7i$_8%Z+81XXkzm5.*t[B_cr4i#%YM/&&4:`{?K*u^:jr'*'/sYR%c6ZIwka^9y!QUE8iU1g{%fB21(8DZE&phxBa-+Uk#c=#8JV2*wNnHGwee]54Wo3hayD#pc*3CDT:_j%SIQNJmi7!*vJx7cG(#-_GpK??+Eo5ZXE`aN/%Y/hf'W%W",
+            "mask_width": 105,
+            "mv_id": "mv14",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "145b36c28854",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c1",
+              "view_kind": "tile"
+            },
+            "run_id": "145b36c28854",
+            "source_box": {
+              "x0": 1208,
+              "x1": 1312,
+              "y0": 0,
+              "y1": 925
+            },
+            "tile_box": {
+              "x0": 1028,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1024
+            },
+            "view": "r0c1",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 604,
+              "x1": 797,
+              "y0": 999,
+              "y1": 1023
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 25,
+            "mask_payload": "!!!!!iB[GzRLJj#3iAPdk$%I_%%qX8UlMr!i*l!:4w@Wbdhl/KCxfuxToYcyVB/[O54@IL$18/Xd_K5A*!q/GG+5'",
+            "mask_width": 194,
+            "mv_id": "mv15",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "145b36c28854",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c1",
+              "view_kind": "tile"
+            },
+            "run_id": "145b36c28854",
+            "source_box": {
+              "x0": 1632,
+              "x1": 1825,
+              "y0": 999,
+              "y1": 1023
+            },
+            "tile_box": {
+              "x0": 1028,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1024
+            },
+            "view": "r0c1",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 0,
+              "x1": 148,
+              "y0": 472,
+              "y1": 564
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 93,
+            "mask_payload": "!!!!!^n{JfY8M(v1kxZ$g1I+*qtM&)8n88c{/OW+qS(6Dw1^@EInOV!/Bi0RPZ_:FW+q!^'DTVu",
+            "mask_width": 149,
+            "mv_id": "mv19",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "604ecf781bf5",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c0",
+              "view_kind": "tile"
+            },
+            "run_id": "604ecf781bf5",
+            "source_box": {
+              "x0": 0,
+              "x1": 148,
+              "y0": 1240,
+              "y1": 1332
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 1372,
+              "y0": 768,
+              "y1": 1792
+            },
+            "view": "r1c0",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 1221,
+              "x1": 1263,
+              "y0": 422,
+              "y1": 544
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 123,
+            "mask_payload": "!!!!!xDpo.U[[12*?59*An[6LVOZU{o:XK#io`QA`vt0rg*WX37YE)!5)lz0hUYL]rwDaUdj2I?W==:L)U-&bHSC{7g*w3H2nXx{2dvs6urR",
+            "mask_width": 43,
+            "mv_id": "mv21",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "cb0e268929c2",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c1",
+              "view_kind": "tile"
+            },
+            "run_id": "cb0e268929c2",
+            "source_box": {
+              "x0": 2249,
+              "x1": 2291,
+              "y0": 1190,
+              "y1": 1312
+            },
+            "tile_box": {
+              "x0": 1028,
+              "x1": 2400,
+              "y0": 768,
+              "y1": 1792
+            },
+            "view": "r1c1",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 188,
+              "x1": 286,
+              "y0": 0,
+              "y1": 159
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 160,
+            "mask_payload": "!!!!!zG=9:w6)2^]c&2&6%!i#z(!jvFA/_Ro4)[UAgU[%56{T(+2jDK7n]tpLE'R/@Q%.J)XG+pQ6-rEMCK:!96:HPuttNRr54P^*DLutwKEH=",
+            "mask_width": 99,
+            "mv_id": "mv22",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "cb0e268929c2",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c1",
+              "view_kind": "tile"
+            },
+            "run_id": "cb0e268929c2",
+            "source_box": {
+              "x0": 1216,
+              "x1": 1314,
+              "y0": 768,
+              "y1": 927
+            },
+            "tile_box": {
+              "x0": 1028,
+              "x1": 2400,
+              "y0": 768,
+              "y1": 1792
+            },
+            "view": "r1c1",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 0,
+              "x1": 226,
+              "y0": 140,
+              "y1": 277
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 138,
+            "mask_payload": "!!!!#8n{JfY02&j#CZ^a04'5Nqq=w%'gpm%)ilEm{+:]#e)Oj&Ep6S+V2/l^'V$D5&BQmc)SYr71CZ.3W=M9tLep2nl_bL[`c_A'@.^==.W0PrEAF-[V0hWrHaoQtu&(m!wiLp.R/!d",
+            "mask_width": 227,
+            "mv_id": "mv23",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "cb0e268929c2",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c1",
+              "view_kind": "tile"
+            },
+            "run_id": "cb0e268929c2",
+            "source_box": {
+              "x0": 1028,
+              "x1": 1254,
+              "y0": 908,
+              "y1": 1045
+            },
+            "tile_box": {
+              "x0": 1028,
+              "x1": 2400,
+              "y0": 768,
+              "y1": 1792
+            },
+            "view": "r1c1",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 421,
+              "x1": 461,
+              "y0": 241,
+              "y1": 303
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 63,
+            "mask_payload": "!!!!!MDpo.+d?&T0]sah]TAD?=O2VQf9%l-f8O@/hexKD!QBVGpA7:O",
+            "mask_width": 41,
+            "mv_id": "mv25",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "cb0e268929c2",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c1",
+              "view_kind": "tile"
+            },
+            "run_id": "cb0e268929c2",
+            "source_box": {
+              "x0": 1449,
+              "x1": 1489,
+              "y0": 1009,
+              "y1": 1071
+            },
+            "tile_box": {
+              "x0": 1028,
+              "x1": 2400,
+              "y0": 768,
+              "y1": 1792
+            },
+            "view": "r1c1",
+            "view_kind": "tile"
+          },
+          {
+            "box": {
+              "x0": 167,
+              "x1": 232,
+              "y0": 1294,
+              "y1": 1337
+            },
+            "frame_height": 1792,
+            "frame_width": 2400,
+            "mask_encoding": "one_bit",
+            "mask_height": 44,
+            "mask_payload": "!!!!!TCdQ?/2?%hmvgVX:o5ctoje^Eb^[WV:H@PlM`ePMcPAiH^vk#2?O]Lpn-=4",
+            "mask_width": 66,
+            "mv_id": "mv3",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "46b5d6f650ea",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "run_id": "46b5d6f650ea",
+            "source_box": {
+              "x0": 167,
+              "x1": 232,
+              "y0": 1294,
+              "y1": 1337
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1792
+            },
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "box": {
+              "x0": 1222,
+              "x1": 1300,
+              "y0": 1167,
+              "y1": 1787
+            },
+            "frame_height": 1792,
+            "frame_width": 2400,
+            "mask_encoding": "one_bit",
+            "mask_height": 621,
+            "mask_payload": "!!!!$5CZ{bhSup![G+W9]F`*=$L6uGwK0D'cLv(.8c:ZH*nfieWf$AaiX=Q?waKmuR[uCRHfl9j.H!oinx$+yDI]w'SXiSy^cch7_moP@o%V8NsDl34p`kb8%vc(W=$7^t5P]QInhivl.T(h9GQDM!+ZN+/V7npPa1n`+../8KCLU/-HOFZa%(*(bj_6OhF(J9oIV4gPNPo:q&+_sprPBL@ALrW2MYW@lPCZQK!IwAR`3HbQ/",
+            "mask_width": 79,
+            "mv_id": "mv4",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "46b5d6f650ea",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "run_id": "46b5d6f650ea",
+            "source_box": {
+              "x0": 1222,
+              "x1": 1300,
+              "y0": 1167,
+              "y1": 1787
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1792
+            },
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "box": {
+              "x0": 286,
+              "x1": 333,
+              "y0": 1465,
+              "y1": 1736
+            },
+            "frame_height": 1792,
+            "frame_width": 2400,
+            "mask_encoding": "one_bit",
+            "mask_height": 272,
+            "mask_payload": "!!!!#)LVS&:2=7eut[BA8uYKr.&Ow(Wbhp*@rG-E+.RnxhUGB2)6Xc7w[YO?EfUy3repwE]KtQPjN^E]A'(OgqU3giysLd'TUa7GGu+?-PSJ&h[3gFXVo4[L3",
+            "mask_width": 48,
+            "mv_id": "mv7",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "46b5d6f650ea",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "run_id": "46b5d6f650ea",
+            "source_box": {
+              "x0": 286,
+              "x1": 333,
+              "y0": 1465,
+              "y1": 1736
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1792
+            },
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "box": {
+              "x0": 938,
+              "x1": 960,
+              "y0": 618,
+              "y1": 685
+            },
+            "frame_height": 1024,
+            "frame_width": 1372,
+            "mask_encoding": "one_bit",
+            "mask_height": 68,
+            "mask_payload": "!!!!!BNSZP'#:9_Ks.t28jbr:?k&9)C.3cVQB$=s]",
+            "mask_width": 23,
+            "mv_id": "mv8",
+            "phrase": "crack",
+            "provenance": {
+              "phrase": "crack",
+              "run_id": "318062c052a1",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "run_id": "318062c052a1",
+            "source_box": {
+              "x0": 938,
+              "x1": 960,
+              "y0": 618,
+              "y1": 685
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 1372,
+              "y0": 0,
+              "y1": 1024
+            },
+            "view": "r0c0",
+            "view_kind": "tile"
+          }
+        ],
+        "parse_errors": [],
+        "phrase": "crack",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [
+          {
+            "detection": {
+              "box": {
+                "x0": 1208,
+                "x1": 1312,
+                "y0": 0,
+                "y1": 925
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 926,
+              "mask_payload": "!!!!%5C2__JtM+q+o?MMl#GD/^LCyc`P5e!P.{e:4U7%]t+-VL[PQ4$0'jR6@o+(4pvw#tiHs+`!Nr[V4i'+${@]24+%[lFy&.@r?@rg:RFsoNZJI'NR8%EW1_[o!vDx.vd07PTOQ$^)^R^/onAMe[0^i4LqXr7oOD6CI674I&bDhDJ-Uq/IDZELvSJmz^%^mnSar4y{`H25ivSV2BM^toih=U*l`r{P:JI'Q!#l0nf(`S6gBZI4w7VsY9+:+o][*+3(R]m!SI8=b4JpbfRm^`mg-Xk/odlyIrCPYeTRK_SR-3Ay'..sjG1bWI)l'/R!D8O:-MP//fTT2#sA_Sk&%TMB(k!!",
+              "mask_width": 105,
+              "mv_id": "mv9",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "318062c052a1",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 1372,
+                  "y0": 0,
+                  "y1": 1024
+                },
+                "view": "r0c0",
+                "view_kind": "tile"
+              },
+              "run_id": "318062c052a1",
+              "source_box": {
+                "x0": 1208,
+                "x1": 1312,
+                "y0": 0,
+                "y1": 925
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "iou": 1.0,
+            "reason": "exact-duplicate",
+            "survivor": {
+              "box": {
+                "x0": 1208,
+                "x1": 1312,
+                "y0": 0,
+                "y1": 925
+              },
+              "mv_id": "mv14",
+              "view": "r0c1"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 0,
+                "x1": 124,
+                "y0": 1239,
+                "y1": 1315
+              },
+              "frame_height": 1792,
+              "frame_width": 2400,
+              "mask_encoding": "one_bit",
+              "mask_height": 77,
+              "mask_payload": "!!!!!Vo]'xZ57@l4%R14$mN)S.C)b//E4[oxQ{8D-svC!'tq^7H5qod=^or=2b0XYA",
+              "mask_width": 125,
+              "mv_id": "mv1",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "46b5d6f650ea",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 2400,
+                  "y0": 0,
+                  "y1": 1792
+                },
+                "view": "whole",
+                "view_kind": "whole"
+              },
+              "run_id": "46b5d6f650ea",
+              "source_box": {
+                "x0": 0,
+                "x1": 124,
+                "y0": 1239,
+                "y1": 1315
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "iou": 0.6769,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 0,
+                "x1": 148,
+                "y0": 1240,
+                "y1": 1332
+              },
+              "mv_id": "mv19",
+              "view": "r1c0"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 159,
+                "x1": 1228,
+                "y0": 708,
+                "y1": 1021
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 301,
+              "mask_payload": "!!!!&uC9GJGB7?iMEJ_jGR?t-9_E%![uWs#Zy49mly%$vM$TQwfYE@6(v!+l3MJZ4&4j{4#`Gl`x2/FYJ%.NF+1TM:mX'seU/1$NDx-9tnw]9$@v0pfj0wY'dv{e2@S6k@8ZB@p@5aL&.=`$2ON0-@GEwl[MgHvn5SgKVorr{8yfHee:['n40U44oQ6gN#W`bz#!OQ/Z0OVO+@HgLmu9xua1ANn]HcVUz!nD{MYnQG+dlWIWONrk$a'{M676_CJ(W{6(ULk%7[R]j1LUSr*imMrb{M7Wk6=e/$3Cb4A!eT()wcTOd`H([]2_d.GWBNU?@6sokT[{'GDb=fQ0iBYNmF9/EUbR(XJ8KN_unFZPH[*SPl)%Pr9:8qH:g4_u'k((U!x&iy9.zh:.k.W%POFw(T/sb=G%zhngO)4Jo(__cw+Kv5+gof{`w9)MoZV`m{%*9:@xeJ+SSmfHxS7RpYPYyXo3!vCoU?qTCK_9Gh`%8A{^38rQar.W$iqrPs:YHmfJvHbDV=.bF:+`C_(fb",
+              "mask_width": 1024,
+              "mv_id": "mv11",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "318062c052a1",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 1372,
+                  "y0": 0,
+                  "y1": 1024
+                },
+                "view": "r0c0",
+                "view_kind": "tile"
+              },
+              "run_id": "318062c052a1",
+              "source_box": {
+                "x0": 159,
+                "x1": 1228,
+                "y0": 708,
+                "y1": 1021
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c0",
+              "view_kind": "tile"
+            },
+            "iou": 0.8865,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 195,
+                "x1": 1253,
+                "y0": 709,
+                "y1": 1041
+              },
+              "mv_id": "mv0",
+              "view": "whole"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 0,
+                "x1": 202,
+                "y0": 907,
+                "y1": 1023
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 117,
+              "mask_payload": "!!!!#/n{JfY1rGmJ'=2]l#1gHE)P_YO-Hk)$Db%g*oJ]vsndT!z2xUStJ'/W6$W0i/'4TGMFWdVoRCo7'=#4d@&C9*/.8=n[r8$vu^3j#H0qz(K61-Us.ms7kfP^g6!!",
+              "mask_width": 203,
+              "mv_id": "mv13",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "145b36c28854",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 1028,
+                  "x1": 2400,
+                  "y0": 0,
+                  "y1": 1024
+                },
+                "view": "r0c1",
+                "view_kind": "tile"
+              },
+              "run_id": "145b36c28854",
+              "source_box": {
+                "x0": 1028,
+                "x1": 1230,
+                "y0": 907,
+                "y1": 1023
+              },
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1024
+              },
+              "view": "r0c1",
+              "view_kind": "tile"
+            },
+            "iou": 0.7454,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 1028,
+                "x1": 1254,
+                "y0": 908,
+                "y1": 1045
+              },
+              "mv_id": "mv23",
+              "view": "r1c1"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 1222,
+                "x1": 1298,
+                "y0": 389,
+                "y1": 1020
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 632,
+              "mask_payload": "!!!!$]CZBUGBWL.bW)izYgt0+a8@w_z#%p8OHFSRpXA/'X1GY'R%_=6W1-3$!Vze#S_%:-(0'b8qVo=^b`{-%t#!@?4GW8K&)AQ{oE?.:=`QX7RblBU1BkeT_%`E0J/2^kgc2(VC0Q96sVglqj35wmfbM{5Wwiz30Fk*molL5CTe)f'mh{djY#AAQ3@9]s6QwUbPU:w*SR'1/e8]cJ?JhRS@rStD{OU*E[CQ[uj?dZL20sNC[rq5aj#OGv*$wA&'M4UslC)1Th0%m@D!yh]i6M%Wz0^e/u",
+              "mask_width": 77,
+              "mv_id": "mv16",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "604ecf781bf5",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 1372,
+                  "y0": 768,
+                  "y1": 1792
+                },
+                "view": "r1c0",
+                "view_kind": "tile"
+              },
+              "run_id": "604ecf781bf5",
+              "source_box": {
+                "x0": 1222,
+                "x1": 1298,
+                "y0": 1157,
+                "y1": 1788
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c0",
+              "view_kind": "tile"
+            },
+            "iou": 0.9578,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 1222,
+                "x1": 1300,
+                "y0": 1167,
+                "y1": 1787
+              },
+              "mv_id": "mv4",
+              "view": "whole"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 292,
+                "x1": 336,
+                "y0": 713,
+                "y1": 974
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 262,
+              "mask_payload": "!!!!!sn{JfZ$5RI41Y_22r[u/owt]:s_SCs6x3Bu%(umRVI2'+cwI#XB7QNhS7s+-UQDNU0&1el$:i78.k=IKt@jn/`k/01&EK.Xj",
+              "mask_width": 45,
+              "mv_id": "mv17",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "604ecf781bf5",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 1372,
+                  "y0": 768,
+                  "y1": 1792
+                },
+                "view": "r1c0",
+                "view_kind": "tile"
+              },
+              "run_id": "604ecf781bf5",
+              "source_box": {
+                "x0": 292,
+                "x1": 336,
+                "y0": 1481,
+                "y1": 1742
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c0",
+              "view_kind": "tile"
+            },
+            "iou": 0.7595,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 286,
+                "x1": 333,
+                "y0": 1465,
+                "y1": 1736
+              },
+              "mv_id": "mv7",
+              "view": "whole"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 168,
+                "x1": 230,
+                "y0": 530,
+                "y1": 569
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 40,
+              "mask_payload": "!!!!!NCum_[dY$j.+mSfqLN(kb=au?{gw^Q'sylVt:U`qOdXZ`vMTVLK",
+              "mask_width": 63,
+              "mv_id": "mv18",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "604ecf781bf5",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 1372,
+                  "y0": 768,
+                  "y1": 1792
+                },
+                "view": "r1c0",
+                "view_kind": "tile"
+              },
+              "run_id": "604ecf781bf5",
+              "source_box": {
+                "x0": 168,
+                "x1": 230,
+                "y0": 1298,
+                "y1": 1337
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c0",
+              "view_kind": "tile"
+            },
+            "iou": 0.8651,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 167,
+                "x1": 232,
+                "y0": 1294,
+                "y1": 1337
+              },
+              "mv_id": "mv3",
+              "view": "whole"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 205,
+                "x1": 353,
+                "y0": 266,
+                "y1": 734
+              },
+              "frame_height": 1792,
+              "frame_width": 2400,
+              "mask_encoding": "one_bit",
+              "mask_height": 469,
+              "mask_payload": "!!!!#pB%nxNxp4v(S_msC]NZ{a0.IPssLZ3aMbBHM*#oEsaTLsirqcQr.gEHh)iaocT[ux`PJN[!TH*w5F'Y6g+!yClowGb##QMb372JrHX7]wTl!P1PaVkunoy%?Q+eyQdIfAAw#moiUZH@]lMB*dOs:]pjtn(/n=lf8QAfX4ZxQNUV%kmB)L-^so/OW!+-Il5*q%CDQhrE",
+              "mask_width": 149,
+              "mv_id": "mv2",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "46b5d6f650ea",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 2400,
+                  "y0": 0,
+                  "y1": 1792
+                },
+                "view": "whole",
+                "view_kind": "whole"
+              },
+              "run_id": "46b5d6f650ea",
+              "source_box": {
+                "x0": 205,
+                "x1": 353,
+                "y0": 266,
+                "y1": 734
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "iou": 0.9538,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 207,
+                "x1": 352,
+                "y0": 258,
+                "y1": 739
+              },
+              "mv_id": "mv12",
+              "view": "r0c0"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 516,
+                "x1": 1253,
+                "y0": 0,
+                "y1": 277
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 278,
+              "mask_payload": "!!!!%JpL@R&0d[x*fVl)br)lXL'uGp{R8`k!RM`KzScPuB0kUccg2kSxJaWluS6:lF(:2w@Qs=$vgDqcKD=[id(f@xxY9GrzK)-H2aN{Xmfj=ue`pcTFf71=uI$*MofZoiHMd([HIQIj7]a`5c7RlfWr@&H3dcK+63_!AEP1jMS:i`+lKi6%4lmE$.i&]MdGys.q_U%{r`:(*APHa7rNeHMqc+jz^$M?0C2&?.61s?:Vs0n#*C`iW)YMw$%lh`'rrz6/ZS`G?Clb]3.p45bLJD:_Z^p:X[B$laNJd!^+L3JW'_YSC762(8dH%CAQSeaI#_lxBHVjBSORtoY3eAOH.Sm//rqPl8vuKlmU^DNqMMe+3A`p%-",
+              "mask_width": 738,
+              "mv_id": "mv20",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "604ecf781bf5",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 1372,
+                  "y0": 768,
+                  "y1": 1792
+                },
+                "view": "r1c0",
+                "view_kind": "tile"
+              },
+              "run_id": "604ecf781bf5",
+              "source_box": {
+                "x0": 516,
+                "x1": 1253,
+                "y0": 768,
+                "y1": 1045
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 1372,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c0",
+              "view_kind": "tile"
+            },
+            "iou": 0.568,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 195,
+                "x1": 1253,
+                "y0": 709,
+                "y1": 1041
+              },
+              "mv_id": "mv0",
+              "view": "whole"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 193,
+                "x1": 269,
+                "y0": 388,
+                "y1": 1005
+              },
+              "frame_height": 1024,
+              "frame_width": 1372,
+              "mask_encoding": "one_bit",
+              "mask_height": 618,
+              "mask_payload": "!!!!$[CO2CfY(MY-Rr6*#3UqbO%r'M[OR'2plaSm&:1zBL9l-+9IRe[URV&OgcS'XYwld&Ge/_DMQWaG`X&^Jj!ua^Bj'nhGX:t!gIUc#Qk7b2F3Ny]B6j/ScE%oCb$nd6Ul$!xWlQ?9_()Fmie.@AJ%++Je25J3iUS'Z9w`YhtTSz)pVo)6Elp^kiJ)_TWEBr(%kkoHjZpdl.i4N3c$[fE%[7J+5o%4vRHE388_HVA)rZvxmgTmZ3IQ:CS-h*E@Y7r8R4=Zk]:`wot4xH%*ObVFfuf-y",
+              "mask_width": 77,
+              "mv_id": "mv24",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "cb0e268929c2",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 1028,
+                  "x1": 2400,
+                  "y0": 768,
+                  "y1": 1792
+                },
+                "view": "r1c1",
+                "view_kind": "tile"
+              },
+              "run_id": "cb0e268929c2",
+              "source_box": {
+                "x0": 1221,
+                "x1": 1297,
+                "y0": 1156,
+                "y1": 1773
+              },
+              "tile_box": {
+                "x0": 1028,
+                "x1": 2400,
+                "y0": 768,
+                "y1": 1792
+              },
+              "view": "r1c1",
+              "view_kind": "tile"
+            },
+            "iou": 0.9126,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 1222,
+                "x1": 1300,
+                "y0": 1167,
+                "y1": 1787
+              },
+              "mv_id": "mv4",
+              "view": "whole"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 416,
+                "x1": 468,
+                "y0": 45,
+                "y1": 290
+              },
+              "frame_height": 1792,
+              "frame_width": 2400,
+              "mask_encoding": "one_bit",
+              "mask_height": 246,
+              "mask_payload": "!!!!!iDF97FLwLOEq@A@%XCjdo'/M&-cgs!_bWtyE`jBaC/fy7MU]ug-n3.]M+jr06+=-(%.yy%M%8JIXis2e]ufC",
+              "mask_width": 53,
+              "mv_id": "mv5",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "46b5d6f650ea",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 2400,
+                  "y0": 0,
+                  "y1": 1792
+                },
+                "view": "whole",
+                "view_kind": "whole"
+              },
+              "run_id": "46b5d6f650ea",
+              "source_box": {
+                "x0": 416,
+                "x1": 468,
+                "y0": 45,
+                "y1": 290
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "iou": 0.9071,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 412,
+                "x1": 467,
+                "y0": 45,
+                "y1": 291
+              },
+              "mv_id": "mv10",
+              "view": "r0c0"
+            }
+          },
+          {
+            "detection": {
+              "box": {
+                "x0": 1207,
+                "x1": 1298,
+                "y0": 0,
+                "y1": 897
+              },
+              "frame_height": 1792,
+              "frame_width": 2400,
+              "mask_encoding": "one_bit",
+              "mask_height": 898,
+              "mask_payload": "!!!!$kC4t'vJROJ6a$+1@6Dkm.=54Pvm=TV/'gTHo[.C!O8k`3fgIs2G8%9_B*LxZPit5=i1qd0Ia1*?'Aga/9]BLS`NctMfGtG'Er%J$X`hoK9p-gt*PHS8.Z]U-xPOd_mxJFv'flKGheX^?[4y.`ZEwfUuqfJq/r`pLBd`]y`mxA0Bt20e2#3c61r4JOJpycOf%PQ6_wqZoIcDWEn8%a#-bR[tWVo:?#)JX^/$H`d4YGD4c5?$hyob)c7qN[$El(b+dZW00W.pJxGqZ].l(:$ULC]eK-rCEIuDD21nU@rxK!!!",
+              "mask_width": 92,
+              "mv_id": "mv6",
+              "phrase": "crack",
+              "provenance": {
+                "phrase": "crack",
+                "run_id": "46b5d6f650ea",
+                "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+                "tile_box": {
+                  "x0": 0,
+                  "x1": 2400,
+                  "y0": 0,
+                  "y1": 1792
+                },
+                "view": "whole",
+                "view_kind": "whole"
+              },
+              "run_id": "46b5d6f650ea",
+              "source_box": {
+                "x0": 1207,
+                "x1": 1298,
+                "y0": 0,
+                "y1": 897
+              },
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "iou": 0.8314,
+            "reason": "duplicate-iou",
+            "survivor": {
+              "box": {
+                "x0": 1208,
+                "x1": 1312,
+                "y0": 0,
+                "y1": 925
+              },
+              "mv_id": "mv14",
+              "view": "r0c1"
+            }
+          }
+        ],
+        "views": [
+          {
+            "run_id": "46b5d6f650ea",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "run_id": "318062c052a1",
+            "status": "cached",
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": "145b36c28854",
+            "status": "cached",
+            "view": "r0c1",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": "604ecf781bf5",
+            "status": "cached",
+            "view": "r1c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": "cb0e268929c2",
+            "status": "cached",
+            "view": "r1c1",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "re0",
+            "view_kind": "reinspect"
+          }
+        ]
+      },
+      "crack in wall": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "crack in wall",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "fb7b225b1e8c",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r0c1",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r1c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r1c1",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "re0",
+            "view_kind": "reinspect"
+          }
+        ]
+      },
+      "damaged wall": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 1,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [
+          {
+            "box": {
+              "x0": 0,
+              "x1": 2386,
+              "y0": 0,
+              "y1": 1791
+            },
+            "frame_height": 1792,
+            "frame_width": 2400,
+            "mask_encoding": "one_bit",
+            "mask_height": 769,
+            "mask_payload": "!!!!0@qo%3urB?1[PAj8th?U^3=%e{gZCdwBNv'2:Y*@mZ^)yVls%H_=6-Vvqk]'8OY/[fxn.IOX=FH%5%{40utBmqmLo!rVe{+996bKv?(m7k@CP)qDeU{S?Q1E`mbm4&JX+i-x5ts9dDKXq2BuTI%a/uMQTKcJ3sj-@QEvz&do[5:Qp$AKX2'Lg90hFH/do)Cflam$sLsSrt@$+7]:94+$f7z2yV%X)Cx*.CS)p3qO2s2O_@k2F+XqF8Acp6wx//%E37`.gP#n1T^D56/Z9xoruGqGXP5/CdBX-N_60m:uYr.:vJsU0(Q!`5x&3`8yXS@Vm6uiW^$vQbYw2gfsLT/U7`=Ab2TSD(?8K+-&ifx5r]:oHftrZiF]H`j085)tK+h{G[E(20+uWE/-lr$46cptwPeesQ2cp4ASwiT=n7pHZV-NW69Hs4hx+Zz!UJt.9yNL^weCunLtA%-leAWxH!9:TW(_Ou]@S[OsI?bY_jhq@W6Bo+.oSr4hj+e5LJbwsW02/+w3u]eWMF05_6M)Yf#IrK!9ePN)95NO^ogXj?Z=_2]aEtWE0`h&6Mh1l1c$*QPons=p.CQQ!AZ$w{TyfC15r@54SaRc:Q6ha_D6X7XKRw4rDe])=KwF3$aK=B6O4pTV=elkyhP?Eg)v914L'ti1Ak:ZPUwkp=+/#7+t5Ow2AW0$MOJRzcOu)'_sHSflwO[/]J.hqJlyx{q4]Hb{r+hp^PJ_2Q=!0ll6YryQw:b?^6GEbRr=%Y:d1OhVt6nB=(S5l@H9F(sgE/.22BqNj^Rj7NWpv:o%&@v/GMYWWtgZF+B1c7xOPIbn:G=wu9$!Hj{EtrYpjR/c`IDz@#3UrWTncS:8M2(Ba3]Ngy)pPa$qhkZ)l_@'1uy&8%q[cSC-6^Q(Q:Mk5LI^7a5s{8G0DGF=WuQPO$G^8XJ*w/q{M@NQbnMQ)F^Zp!*E8!S{hO(/5Ea?ZlB%@SuUq#ZW]D%Y?twlbik7sftYk=6*SpOi.q(uKG7ADp`x.[x+e*S7vNpZIf='_(w$pz)X)Ur9_j7e'eL3_K4`^M`h:*yrTpT!0a(s8XjccZO[d]%LY:l%0f65etD'LFk?2yI:{Oq]o]tTgK)^i2'HLG'b%VI78%13'H#wgZ&c)`Qr(jOCVevWWTsSHkh_4`aYodLB#feie=O-8*Gs`kWb7NwSkf.l0JR0?[VOPHMZ@`Dv8giYK?cr?{qjv`@xmq9==I++SiV?$UP]4WL*r)9f75W3p-qQcH2=wuaFW:`m$:&+1wK)9adR@K{4e&EW7]-vMtf0JExEsNn?DN+O&5x^QyLp%U+%y5+&_]de'b[3Sey63qS)6U@&-.R]wnbb@G1h9YCD`PiYV=(D.!oVm^$Ca2UVt#/PpM*dr!3:q.`EM'/r_MV+iUw##l8-RvIxse.gL^@G",
+            "mask_width": 1024,
+            "mv_id": "mv0",
+            "phrase": "damaged wall",
+            "provenance": {
+              "phrase": "damaged wall",
+              "run_id": "ed0ee40822df",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "run_id": "ed0ee40822df",
+            "source_box": {
+              "x0": 0,
+              "x1": 2386,
+              "y0": 0,
+              "y1": 1791
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1792
+            },
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ],
+        "parse_errors": [],
+        "phrase": "damaged wall",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "ed0ee40822df",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r0c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r0c1",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r1c0",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "r1c1",
+            "view_kind": "tile"
+          },
+          {
+            "run_id": null,
+            "status": "uncached",
+            "view": "re0",
+            "view_kind": "reinspect"
+          }
+        ]
+      },
+      "exposed steel bar": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "exposed steel bar",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "375edc53c2b1",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "floor slab": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "floor slab",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "c87c5cc9d05a",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "hoarding": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "hoarding",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "16ba2d88948a",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "open ground floor": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "open ground floor",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "c465b2146e44",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "parapet": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "parapet",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "ba3695db9f17",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "shop shutter": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "shop shutter",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "ca94d9b824f2",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "water tank": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 0,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [],
+        "parse_errors": [],
+        "phrase": "water tank",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "924d13f6d576",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      },
+      "window": {
+        "artifact": "multiview-merge",
+        "counts": {
+          "kept": 2,
+          "rejected": 0,
+          "suppressed": 0
+        },
+        "kept": [
+          {
+            "box": {
+              "x0": 0,
+              "x1": 70,
+              "y0": 143,
+              "y1": 581
+            },
+            "frame_height": 1792,
+            "frame_width": 2400,
+            "mask_encoding": "one_bit",
+            "mask_height": 439,
+            "mask_payload": "!!!!!bo]'xZGD9GkKeS^J/V[U@E9mLc]7.m?FYe{%B6(s*?aSr:(Q.N2+Rxo#D#5^9]%-DMk@cYpM=@2",
+            "mask_width": 71,
+            "mv_id": "mv0",
+            "phrase": "window",
+            "provenance": {
+              "phrase": "window",
+              "run_id": "4bf449657a13",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "run_id": "4bf449657a13",
+            "source_box": {
+              "x0": 0,
+              "x1": 70,
+              "y0": 143,
+              "y1": 581
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1792
+            },
+            "view": "whole",
+            "view_kind": "whole"
+          },
+          {
+            "box": {
+              "x0": 1760,
+              "x1": 2399,
+              "y0": 0,
+              "y1": 820
+            },
+            "frame_height": 1792,
+            "frame_width": 2400,
+            "mask_encoding": "one_bit",
+            "mask_height": 821,
+            "mask_payload": "!!!!$%CZW`^x8TpjxfBqfmR3KJ_x^L4%1%n00-1U&iAbw]KL=cX4WHQ!S?d^Bl@C!)6'T[J]@fmu0$X!'f0DcrD9qwo&*dr?rMQhBOwr#6bmM8F2^ER&U6ysgwrLiujK#]YCy3Rh1.RMuHD]AD=1rqXIl]{_:l8%hakOSuxwMCsdn]tWOX#nQ@xf!)@T)8@5#64&B6!3?Z2.VqPEvd_*s^Q/PQp1g!!",
+            "mask_width": 640,
+            "mv_id": "mv1",
+            "phrase": "window",
+            "provenance": {
+              "phrase": "window",
+              "run_id": "4bf449657a13",
+              "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+              "tile_box": {
+                "x0": 0,
+                "x1": 2400,
+                "y0": 0,
+                "y1": 1792
+              },
+              "view": "whole",
+              "view_kind": "whole"
+            },
+            "run_id": "4bf449657a13",
+            "source_box": {
+              "x0": 1760,
+              "x1": 2399,
+              "y0": 0,
+              "y1": 820
+            },
+            "tile_box": {
+              "x0": 0,
+              "x1": 2400,
+              "y0": 0,
+              "y1": 1792
+            },
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ],
+        "parse_errors": [],
+        "phrase": "window",
+        "rejected": [],
+        "source_sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+        "suppressed": [],
+        "views": [
+          {
+            "run_id": "4bf449657a13",
+            "status": "cached",
+            "view": "whole",
+            "view_kind": "whole"
+          }
+        ]
+      }
+    },
+    "model": "sam-3.1",
+    "phrases": [
+      "crack",
+      "crack in wall",
+      "damaged wall",
+      "exposed steel bar",
+      "building",
+      "window",
+      "column",
+      "floor slab",
+      "balcony",
+      "parapet",
+      "open ground floor",
+      "shop shutter",
+      "water tank",
+      "air conditioner unit",
+      "hoarding",
+      "car parked under building"
+    ],
+    "projected_cost_usd": 0.0,
+    "strategy": "multiview",
+    "view_stats": {
+      "reinspect": {
+        "cached": 0,
+        "failed": 0,
+        "live": 0,
+        "planned": 3,
+        "uncached": 3
+      },
+      "tile": {
+        "cached": 4,
+        "failed": 0,
+        "live": 0,
+        "planned": 12,
+        "uncached": 8
+      },
+      "whole": {
+        "cached": 16,
+        "failed": 0,
+        "live": 0,
+        "planned": 16,
+        "uncached": 0
+      }
+    }
+  },
+  "sha256": "7f1509678711feb8c5b62110d75056851199e32a6e44ef4d6bf63ae012ce7d03",
+  "status": "partial",
+  "stored_image": "original.png",
+  "width": 2400
+}

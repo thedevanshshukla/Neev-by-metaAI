@@ -1,0 +1,46 @@
+{
+  "audit": {
+    "actual_architecture_executed": "baseline",
+    "cache_usage": "cached",
+    "fallback_reason": null,
+    "inference_status": "complete",
+    "model_id": "sam-3.1",
+    "model_version": "3.1",
+    "selected_architecture": "baseline",
+    "wonder_mode": "shadow"
+  },
+  "created_utc": "2026-11-04T14:16:43.795447+00:00",
+  "height": 1536,
+  "image_name": "in4.png",
+  "inspection_id": "f408f415dd77",
+  "mime": "image/png",
+  "quality_metrics": {
+    "laplacian_var": 2406.22,
+    "mean_luma": 155.31,
+    "min_side_px": 1536,
+    "saturated_frac": 0.0082
+  },
+  "quality_warnings": [],
+  "run": {
+    "cache_hits": 1,
+    "cells": [
+      {
+        "phrase": "crack",
+        "run_id": "65b260416807",
+        "status": "cached"
+      }
+    ],
+    "confirm_live": false,
+    "created_utc": "2026-11-04T14:17:57.222575+00:00",
+    "failures": 0,
+    "live_calls": 0,
+    "model": "sam-3.1",
+    "phrases": [
+      "crack"
+    ]
+  },
+  "sha256": "24dc7c5dc05b4dd4709dd2b1c242478d7875121cf317e41029acabb631937bf7",
+  "status": "complete",
+  "stored_image": "original.png",
+  "width": 2752
+}

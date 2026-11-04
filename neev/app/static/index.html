@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neev inspection screening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <nav class="app-nav">
+    <div class="nav-container">
+      <a href="#/home" class="brand">
+        <div class="logo-mark">N</div>
+        <div class="brand-text">
+          <h1>Neev</h1>
+          <div class="subtitle">Building Facade Defect Screening</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#/home" class="nav-item" id="nav-home">Home</a>
+        <a href="#/dashboard" class="nav-item" id="nav-dashboard">Dashboard</a>
+        <a href="#/new" class="nav-item" id="nav-new">New Inspection</a>
+        <a href="#/history" class="nav-item" id="nav-history">History</a>
+        <a href="#/about" class="nav-item" id="nav-about">Methodology & Benchmark</a>
+      </div>
+
+      <div class="nav-status">
+        <div class="status-badge" id="backend-status-pill">
+          <span class="status-dot online"></span>
+          <span id="backend-status-text">Server Up</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Application Content Area -->
+  <main class="app-container">
+
+    <!-- ================= VIEW 0: DEDICATED HOME / SYSTEM SHOWCASE ================= -->
+    <section id="view-home" class="view-panel">
+      <!-- Dedicated Home Page Presentation (One-Page View, No Scroll) -->
+      <div id="home-presentation" class="home-presentation-container">
+        <div class="home-header-block">
+          <h1 class="home-title">Intelligent Facade Inspection Workstation</h1>
+          <p class="home-subtitle">
+            Preliminary visual defect screening, morphological quantification, and auditable engineering evidence powered by Meta SAM 3.1.
+          </p>
+        </div>
+
+        <!-- Architectural Facade Laser Scanner Visualization -->
+        <div class="facade-scanner-visual">
+          <div class="scanner-hud-header">
+            <span class="hud-pill"><span class="hud-dot live"></span> TARGET: Building Facade Structures</span>
+            <span class="hud-pill">VISION: Meta SAM 3.1 Architecture</span>
+            <span class="hud-pill">STATUS: Automated Defect Screening Ready</span>
+          </div>
+
+          <div class="facade-wireframe-stage">
+            <svg class="facade-svg" viewBox="0 0 900 210" fill="none" preserveAspectRatio="none">
+              <defs>
+                <pattern id="facade-grid-pat" width="30" height="25" patternUnits="userSpaceOnUse">
+                  <path d="M 30 0 L 0 0 0 25" fill="none" stroke="rgba(101, 88, 201, 0.08)" stroke-width="1"/>
+                </pattern>
+                <linearGradient id="laser-grad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(101, 88, 201, 0)"/>
+                  <stop offset="50%" stop-color="rgba(101, 88, 201, 0.4)"/>
+                  <stop offset="100%" stop-color="rgba(224, 140, 40, 0.95)"/>
+                </linearGradient>
+                <filter id="laser-glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              <rect width="900" height="210" fill="url(#facade-grid-pat)"/>
+
+              <!-- Structural Floor Slabs & Beams -->
+              <line x1="40" y1="15" x2="860" y2="15" stroke="rgba(41, 39, 53, 0.16)" stroke-width="2"/>
+              <line x1="40" y1="105" x2="860" y2="105" stroke="rgba(41, 39, 53, 0.16)" stroke-width="2"/>
+              <line x1="40" y1="195" x2="860" y2="195" stroke="rgba(41, 39, 53, 0.16)" stroke-width="2"/>
+
+              <!-- Structural Columns -->
+              <line x1="160" y1="15" x2="160" y2="195" stroke="rgba(41, 39, 53, 0.12)" stroke-width="2"/>
+              <line x1="380" y1="15" x2="380" y2="195" stroke="rgba(41, 39, 53, 0.12)" stroke-width="2"/>
+              <line x1="600" y1="15" x2="600" y2="195" stroke="rgba(41, 39, 53, 0.12)" stroke-width="2"/>
+              <line x1="820" y1="15" x2="820" y2="195" stroke="rgba(41, 39, 53, 0.12)" stroke-width="2"/>
+
+              <!-- Facade Window Openings -->
+              <rect x="200" y="32" width="140" height="52" rx="4" fill="rgba(101, 88, 201, 0.04)" stroke="rgba(101, 88, 201, 0.22)" stroke-width="1.5"/>
+              <rect x="420" y="32" width="140" height="52" rx="4" fill="rgba(101, 88, 201, 0.04)" stroke="rgba(101, 88, 201, 0.22)" stroke-width="1.5"/>
+              <rect x="640" y="32" width="140" height="52" rx="4" fill="rgba(101, 88, 201, 0.04)" stroke="rgba(101, 88, 201, 0.22)" stroke-width="1.5"/>
+
+              <rect x="200" y="122" width="140" height="52" rx="4" fill="rgba(101, 88, 201, 0.04)" stroke="rgba(101, 88, 201, 0.22)" stroke-width="1.5"/>
+              <rect x="420" y="122" width="140" height="52" rx="4" fill="rgba(101, 88, 201, 0.04)" stroke="rgba(101, 88, 201, 0.22)" stroke-width="1.5"/>
+              <rect x="640" y="122" width="140" height="52" rx="4" fill="rgba(101, 88, 201, 0.04)" stroke="rgba(101, 88, 201, 0.22)" stroke-width="1.5"/>
+
+              <!-- Defect 1: Diagonal Shear Crack Vector with Neon Glow -->
+              <g class="detected-crack-feature" filter="url(#laser-glow)">
+                <path class="crack-path pulse-crack" d="M 150 25 Q 165 60 195 85 T 215 110" stroke="#6558C9" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="150" cy="25" r="4" fill="#6558C9"/>
+                <circle cx="215" cy="110" r="4" fill="#E08C28"/>
+              </g>
+
+              <!-- Defect 2: Mortar Joint Stepped Fracture -->
+              <g class="detected-crack-feature" filter="url(#laser-glow)">
+                <path class="crack-path pulse-crack" d="M 580 115 L 600 115 L 600 135 L 620 135 L 620 155 L 645 155" stroke="#E08C28" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="580" cy="115" r="3.5" fill="#E08C28"/>
+                <circle cx="645" cy="155" r="3.5" fill="#6558C9"/>
+              </g>
+
+              <!-- Animated Laser Scanning Sweep Line -->
+              <line class="laser-beam-line" x1="0" y1="0" x2="900" y2="0" stroke="url(#laser-grad)" stroke-width="3.5"/>
+            </svg>
+
+            <!-- Telemetry Reticle Overlays -->
+            <div class="hud-target-reticle reticle-1">
+              <span class="reticle-corner tl"></span><span class="reticle-corner tr"></span>
+              <span class="reticle-corner bl"></span><span class="reticle-corner br"></span>
+              <span class="reticle-label">DEFECT#0 · IN-PLANE DIAGONAL 36.1° · SAM 3.1</span>
+            </div>
+
+            <div class="hud-target-reticle reticle-2">
+              <span class="reticle-corner tl"></span><span class="reticle-corner tr"></span>
+              <span class="reticle-corner bl"></span><span class="reticle-corner br"></span>
+              <span class="reticle-label">DEFECT#1 · MORTAR STEP SEPARATION · P95=42px</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-badge-num">01</div>
+              <h3>Zero-Shot Precision Segmentation</h3>
+            </div>
+            <p>
+              Powered by frozen Meta SAM 3.1 with 80.3% precision, delineating complex mortar joint separations, concrete fractures, and hairline fissures.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-badge-num">02</div>
+              <h3>Mathematical Morphological Physics</h3>
+            </div>
+            <p>
+              Deterministic 2D mechanics: Zhang-Suen skeletonization, EDT orthogonal trace width profiling, and in-plane geometric orientation classification.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-badge-num">03</div>
+              <h3>Auditable Field Inspection Reports</h3>
+            </div>
+            <p>
+              Engineered for structural engineers: SHA-256 provenance hashes, isolated defect patch crops, and standalone printable PDF/HTML reports.
+            </p>
+          </div>
+        </div>
+
+        <div class="home-action-row">
+          <a href="#/dashboard" class="btn btn-primary btn-lg home-enter-btn" id="home-enter-btn">
+            Open Inspection Dashboard →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 1: DASHBOARD ================= -->
+    <section id="view-dashboard" class="view-panel">
+      <div class="panel-header" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;">
+        <div>
+          <h2>Inspection Operations Dashboard</h2>
+          <p class="section-desc">Automated visual screening for concrete masonry facades, hairline crack detection, and physical diagnostics.</p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a href="#/new" class="btn btn-primary btn-sm" style="white-space: nowrap;">+ New Inspection</a>
+          <a href="#/home" class="btn btn-secondary btn-sm" id="btn-dashboard-to-home" style="white-space: nowrap;">
+            Home Overview
+          </a>
+        </div>
+      </div>
+
+      <!-- Showcase Demo Cases -->
+      <div class="card-panel">
+        <div class="panel-header">
+          <h2>Verified Facade Showcase Demos</h2>
+          <p class="section-desc">Inspect pre-computed benchmark facade runs demonstrating crack segmentation, multi-view tiling, and intact controls.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Demo 1: dm1.png -->
+          <div class="showcase-card">
+            <div class="showcase-thumb-box">
+              <img src="/inspections/174d4b204d85/image" alt="Dense Facade Cracking" onerror="this.src='/test_fresh_facade.png'">
+              <span class="showcase-badge-overlay badge badge-brand">Dense Masonry Cracking</span>
+            </div>
+            <div class="showcase-body">
+              <h3>Multi-Crack Facade (dm1.png)</h3>
+              <p>Image: <code>dm1.png</code> (2400×1792). Full-facade screening over weathered concrete masonry. Screened 14 candidate surface crack instances across wall elements.</p>
+              <div class="showcase-footer">
+                <span class="badge badge-warning">Needs Inspection (14 Defects)</span>
+                <a href="#/inspection/174d4b204d85" class="btn btn-secondary btn-sm">Inspect Facade →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 2: h2.png -->
+          <div class="showcase-card">
+            <div class="showcase-thumb-box">
+              <img src="/inspections/e254a194d2b7/image" alt="Shadowed Edge Crack" onerror="this.src='/test_fresh_facade.png'">
+              <span class="showcase-badge-overlay badge badge-danger">Diagonal Feature</span>
+            </div>
+            <div class="showcase-body">
+              <h3>Diagonal Linear Crack (h2.png)</h3>
+              <p>Image: <code>h2.png</code> (1448×1086). Multi-view screening flagged 10 candidate cracks, including a prominent 36.1° diagonal feature. Visual orientation consistent with in-plane shear geometry (physical cause requires physical inspection).</p>
+              <div class="showcase-footer">
+                <span class="badge badge-danger">Needs Inspection (10 Defects)</span>
+                <a href="#/inspection/e254a194d2b7" class="btn btn-secondary btn-sm">Inspect Facade →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 3: dv2.png -->
+          <div class="showcase-card">
+            <div class="showcase-thumb-box">
+              <img src="/inspections/28c9ad312990/image" alt="Difficult Viewpoint" onerror="this.src='/test_fresh_facade.png'">
+              <span class="showcase-badge-overlay badge badge-brand">Oblique Perspective</span>
+            </div>
+            <div class="showcase-body">
+              <h3>Boundary Flexure Feature (dv2.png)</h3>
+              <p>Image: <code>dv2.png</code> (1448×1086). Oblique perspective capture. Screened 3 candidate visual cracks along joint and slab boundary orientations.</p>
+              <div class="showcase-footer">
+                <span class="badge badge-warning">Needs Inspection (3 Defects)</span>
+                <a href="#/inspection/28c9ad312990" class="btn btn-secondary btn-sm">Inspect Facade →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 4: in4.png (Intact Facade Control) -->
+          <div class="showcase-card">
+            <div class="showcase-thumb-box">
+              <img src="/inspections/f408f415dd77/image" alt="Intact Facade Control" onerror="this.src='/test_fresh_facade.png'">
+              <span class="showcase-badge-overlay badge badge-success">Looks Fine</span>
+            </div>
+            <div class="showcase-body">
+              <h3>Intact Facade Control (in4.png)</h3>
+              <p>Image: <code>in4.png</code> (2752×1536). Real-world intact facade control. Automated visual screening confirmed 0 crack candidates (Model Inference: Looks Fine), demonstrating high false-alarm specificity.</p>
+              <div class="showcase-footer">
+                <span class="badge badge-success">Looks Fine (0 Defects)</span>
+                <a href="#/inspection/f408f415dd77" class="btn btn-secondary btn-sm">Inspect Facade →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Inspections Table -->
+      <div class="card-panel">
+        <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <div>
+            <h2>Recent Screening Records</h2>
+            <p class="section-desc" style="margin-bottom: 0;">Inspections recorded in the current session and audit log.</p>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-reset-history-dash" title="Clean up inspection history" style="color: var(--danger-text); border-color: var(--danger-border); background: var(--danger-subtle);">
+              Reset History
+            </button>
+            <a href="#/new" class="btn btn-primary">+ New Inspection</a>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table" id="dashboard-recent-table">
+            <thead>
+              <tr>
+                <th>Inspection ID</th>
+                <th>Image Name</th>
+                <th>Dimensions</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="dashboard-recent-tbody">
+              <tr><td colspan="6" style="text-align:center; padding: 20px; color: var(--text-muted);">Loading inspection records…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= VIEW 2: NEW INSPECTION ================= -->
+    <section id="view-new" class="view-panel">
+      <div class="panel-header">
+        <h2>Initiate New Facade Screening</h2>
+        <p class="section-desc">Upload a high-resolution facade photograph, select your detection architecture, and configure multi-view screening parameters.</p>
+      </div>
+
+      <div class="new-insp-layout">
+        <!-- Left: Upload & Image Validation -->
+        <div class="card-panel">
+          <h2>1. Facade Image Upload</h2>
+          <p class="section-desc">Drop an image file or browse. Image bytes are validated server-side without external network calls.</p>
+
+          <div class="dropzone" id="upload-dropzone">
+            <svg class="icon-upload" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+            <div class="dropzone-prompt">Drag & drop facade image here</div>
+            <div class="dropzone-sub">Supports JPEG, PNG, WebP (Max 15 MiB)</div>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-browse-file">Browse Computer</button>
+            <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" style="display: none;">
+          </div>
+
+          <!-- Preview & Assessment Panel -->
+          <div id="upload-preview-container" style="display: none; margin-top: 18px;">
+            <div class="preview-box">
+              <img id="upload-preview-img" alt="Upload preview">
+            </div>
+            <div class="quality-summary" id="upload-quality-box">
+              <strong>Image Validation:</strong> <span id="upload-file-meta">Ready</span>
+              <div id="upload-quality-warnings" style="margin-top: 6px;"></div>
+              <button type="button" class="btn btn-outline btn-sm" id="btn-clear-photo" style="margin-top: 8px; display: none;">Clear Current Photo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Architecture & Execution Configuration -->
+        <div class="card-panel">
+          <h2>2. Screening Configuration</h2>
+          <p class="section-desc">Select frozen detection architecture and inference parameters.</p>
+
+          <!-- Architecture Selection Cards -->
+          <label style="font-size: 13px; font-weight: 700; margin-bottom: 8px; display: block;">Select Detection Architecture:</label>
+          <div class="arch-cards">
+            <!-- Option 1: Meta SAM 3.1 Primary -->
+            <label class="arch-card selected" id="arch-card-baseline">
+              <input type="radio" name="arch_selection" value="baseline" checked>
+              <div class="arch-card-content">
+                <div class="arch-card-header" style="margin-bottom: 0;">
+                  <span class="arch-card-title">Meta SAM 3.1 (Primary Production)</span>
+                  <span class="badge badge-brand">Recommended</span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Option 2: SAM + U-Net Hybrid -->
+            <label class="arch-card" id="arch-card-hybrid">
+              <input type="radio" name="arch_selection" value="hybrid">
+              <div class="arch-card-content">
+                <div class="arch-card-header" style="margin-bottom: 0;">
+                  <span class="arch-card-title">SAM + U-Net Hybrid (High-Recall)</span>
+                  <span class="badge badge-muted">Secondary</span>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Strategy Selection -->
+          <label style="font-size: 13px; font-weight: 700; margin-bottom: 8px; display: block;">Execution Strategy:</label>
+          <div class="strategy-cards">
+            <label class="strategy-opt selected strategy-card" id="card-multiview">
+              <input type="radio" name="strategy_selection" id="strategy-multiview" value="multiview" checked>
+              <div>
+                <div style="font-weight: 600; font-size: 13px;">Adaptive Multi-View (Tiled 2×2)</div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Evaluates 2×2 overlapping tiles at higher effective pixel resolution for localized surface features. Improves candidate recovery over dense scenes; does not guarantee detection of all hairline cracks.</div>
+              </div>
+            </label>
+
+            <label class="strategy-opt strategy-card" id="card-single">
+              <input type="radio" name="strategy_selection" id="strategy-single" value="single">
+              <div>
+                <div style="font-weight: 600; font-size: 13px;">Standard Whole-Image</div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Single full-resolution pass. Faster inference with lower token usage.</div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Target Defect Prompts (Full 16-Prompt Survey Default - Hidden) -->
+          <div style="display: none;" id="prompts-section-container">
+            <div class="preset-bar">
+              <button type="button" class="preset-chip" id="preset-crack">Crack Focus</button>
+              <button type="button" class="preset-chip" id="preset-defects">Defect Family</button>
+              <button type="button" class="preset-chip active" id="preset-all">Full 16-Prompt Survey</button>
+            </div>
+            <div class="phrases-container phrase-checkboxes" id="phrase-checkboxes">
+              <label class="phrase-check-label"><input type="checkbox" name="phrase" value="crack" checked></label>
+            </div>
+          </div>
+
+          <!-- Execution & Cost Guardrails (Default Controls - Hidden) -->
+          <div class="guardrail-box" style="display: none;">
+            <div class="guardrail-title">
+              <span>Execution & Cost Guardrails</span>
+            </div>
+            <div class="guardrail-opts">
+              <!-- Muse Wonder 1.0 Advisory Mode (Active by default, hidden from UI) -->
+              <select id="select-wonder-mode" style="display: none;">
+                <option value="advisory" selected>Advisory Mode (Multi-modal consensus)</option>
+              </select>
+
+              <label style="margin-top: 2px;">
+                <input type="checkbox" id="confirm-live">
+                <span>Confirm Live API Inference (Billable, requires MODEL_API_KEY)</span>
+              </label>
+              <div id="live-warning" class="warn-live" style="display: none; font-size: 11.5px; color: #8A641B; background: #FFF3D6; padding: 6px 10px; border-radius: 4px; border: 1px solid #F6D686;">
+                Multi-view live execution tiles the image (~5 inference requests for uncached cells). Ensure MODEL_API_KEY is configured.
+              </div>
+
+              <label style="margin-top: 4px;">
+                <input type="checkbox" id="check-allow-fallback" checked>
+                <span>Allow offline fallback to U-Net if API is unreachable</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submission Actions -->
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <button type="button" class="btn btn-primary btn-lg" id="upload-btn">Execute Facade Screening →</button>
+            <span id="screening-progress-msg" style="font-size: 13px; color: var(--text-muted);"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= VIEW 3: EVIDENCE EXPLORER ================= -->
+    <section id="view-inspection" class="view-panel">
+      <!-- Inspection Top Meta Strip -->
+      <div class="explorer-meta-strip">
+        <div class="explorer-meta-left">
+          <span>Inspection ID: <strong id="exp-id" style="font-family: var(--font-mono);">—</strong></span>
+          <span>•</span>
+          <span>Image: <strong id="exp-name">—</strong></span>
+          <span>•</span>
+          <span>Dimensions: <strong id="exp-dims">—</strong></span>
+          <span>•</span>
+          <span>SHA-256: <strong id="exp-sha" style="font-family: var(--font-mono); font-size: 11.5px;">—</strong></span>
+          <span>•</span>
+          <span id="exp-arch-badge" class="badge badge-brand">Meta SAM 3.1</span>
+          <span id="exp-status-badge" class="badge badge-success">Complete</span>
+        </div>
+
+        <div class="explorer-actions">
+          <a href="#" id="exp-btn-report" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Static HTML Report</a>
+          <a href="#" id="exp-btn-original" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Original Image</a>
+          <a href="#" id="exp-btn-json" target="_blank" rel="noopener" class="btn btn-outline btn-sm">{ } JSON</a>
+          <button type="button" class="btn btn-secondary btn-sm" id="exp-btn-rerun" title="Rescan current facade photo without re-uploading">Rescan Facade</button>
+        </div>
+      </div>
+
+      <!-- Executive Model Inference Report Summary Banner -->
+      <div class="inference-summary-banner" id="exp-inference-summary">
+        <div class="inference-summary-header">
+          <span class="summary-prefix">MODEL INFERENCE REPORT SUMMARY:</span>
+          <span class="badge" id="exp-inference-badge">NEEDS INSPECTION</span>
+        </div>
+        <div class="inference-summary-desc" id="exp-inference-desc">
+          Candidate surface crack anomalies delineated. Physical examination by a qualified structural engineer recommended.
+        </div>
+      </div>
+
+      <!-- Split-Screen Interactive Workspace -->
+      <div class="explorer-workspace">
+        <!-- Left: Canvas Viewport Column -->
+        <div class="viewport-col">
+          <div class="viewport-toolbar">
+            <div class="toolbar-group">
+              <button type="button" class="toolbar-btn active" id="btn-layer-overlay">Overlay & Masks</button>
+              <button type="button" class="toolbar-btn" id="btn-layer-original">Original Only</button>
+              <button type="button" class="toolbar-btn" id="btn-layer-split">Split Compare</button>
+            </div>
+
+            <div class="toolbar-group opacity-control">
+              <span>Mask Opacity:</span>
+              <input type="range" id="slider-mask-opacity" min="0" max="100" value="70">
+              <span id="label-mask-opacity">70%</span>
+            </div>
+
+            <div class="toolbar-group">
+              <button type="button" class="toolbar-btn" id="btn-zoom-in" title="Zoom In">+</button>
+              <button type="button" class="toolbar-btn" id="btn-zoom-out" title="Zoom Out">−</button>
+              <button type="button" class="toolbar-btn" id="btn-zoom-fit" title="Fit to Screen">Fit</button>
+              <button type="button" class="toolbar-btn" id="btn-zoom-reset" title="100% Zoom">1:1</button>
+              <button type="button" class="toolbar-btn" id="btn-clear-selection" title="Clear finding selection and reset canvas (Esc)" style="display: none; background: #EDE9FE; color: #5B21B6; border-color: #DDD6FE; font-weight: 600;">Clear Selection</button>
+            </div>
+
+            <div class="toolbar-group" style="font-size: 11.5px; color: var(--text-secondary);">
+              <label style="display: flex; align-items: center; gap: 4px; cursor: pointer;">
+                <input type="checkbox" id="check-show-boxes" checked accent-color="var(--brand-primary)">
+                <span>Boxes</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 4px; cursor: pointer; margin-left: 6px;">
+                <input type="checkbox" id="check-show-measurements" checked accent-color="var(--brand-primary)">
+                <span>Metrics</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Canvas Display Container -->
+          <div class="canvas-container" id="canvas-container">
+            <canvas id="viewport-canvas"></canvas>
+            <div class="canvas-tooltip" id="canvas-tooltip"></div>
+
+            <!-- Analyzing / Generating / Loading HUD Overlay -->
+            <div class="viewport-loading-overlay" id="viewport-loading-overlay" style="display: none;">
+              <div class="analyzing-hud">
+                <div class="analyzing-scanner-ring">
+                  <div class="scanner-sweep-ray"></div>
+                  <div class="scanner-core-pulse"></div>
+                </div>
+                <div class="analyzing-stage-badge" id="analyzing-stage-badge">ANALYZING FACADE EVIDENCE</div>
+                <h4 class="analyzing-headline" id="analyzing-stage-title">Processing Morphological Layers</h4>
+                <p class="analyzing-subline" id="analyzing-stage-sub">Delineating crack fissures & computing orthogonal physics metrics...</p>
+                
+                <div class="analyzing-progress-track">
+                  <div class="analyzing-progress-bar" id="analyzing-progress-bar"></div>
+                </div>
+
+                <div class="analyzing-telemetry-grid">
+                  <div class="telemetry-pill">
+                    <span class="tele-dot active"></span>
+                    <span>SPATIAL ALIGNMENT</span>
+                  </div>
+                  <div class="telemetry-pill">
+                    <span class="tele-dot active"></span>
+                    <span>MASK RECONCILIATION</span>
+                  </div>
+                  <div class="telemetry-pill">
+                    <span class="tele-dot active"></span>
+                    <span>PHYSICS INGESTION</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Findings & Diagnostics Column -->
+        <div class="findings-col">
+          <div class="findings-header">
+            <div class="findings-title-row">
+              <h3>Screened Visual Findings (<span id="findings-count-pill">0</span>)</h3>
+              <button type="button" class="btn btn-outline btn-xs" id="btn-clear-selection-panel" style="display: none; font-size: 11px; padding: 2px 8px; margin-left: auto; margin-right: 8px; color: #5B21B6; border-color: #DDD6FE; background: #F5F3FF; cursor: pointer;">Clear Selection</button>
+              <span class="badge badge-brand" id="findings-strategy-pill">Adaptive Multi-View</span>
+            </div>
+
+            <div class="findings-filter-row">
+              <select id="filter-findings-priority" title="Filter by priority">
+                <option value="">All Priorities</option>
+                <option value="needs_closer_inspection">Critical / Needs Closer Inspection</option>
+                <option value="review">Review Recommended</option>
+                <option value="informational">Informational</option>
+              </select>
+
+              <select id="filter-findings-sort" title="Sort findings">
+                <option value="priority">Sort by Priority (High → Low)</option>
+                <option value="length">Sort by Crack Length</option>
+                <option value="width">Sort by Trace Width (Max Pixels)</option>
+                <option value="area">Sort by Area</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Findings List Scroll Area -->
+          <div class="findings-list-scroll" id="findings-scroll-container">
+            <div style="text-align: center; color: var(--text-muted); padding: 40px 20px;">
+              No findings loaded yet.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= VIEW 4: INSPECTION HISTORY ================= -->
+    <section id="view-history" class="view-panel">
+      <div class="panel-header">
+        <h2>Inspection Audit Records & History</h2>
+        <p class="section-desc">Search, inspect, and export all building facade screenings preserved in local file persistence.</p>
+      </div>
+
+      <div class="card-panel">
+        <div class="history-controls">
+          <input type="text" class="history-search-input" id="history-search" placeholder="Search by ID, image name, or date…">
+          <div style="display: flex; gap: 10px;">
+            <select id="history-filter-status" style="padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border-subtle); font-size: 13px;">
+              <option value="">All Statuses</option>
+              <option value="complete">Complete</option>
+              <option value="partial">Partial</option>
+              <option value="uploaded">Uploaded Only</option>
+            </select>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-refresh-history">Refresh</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-reset-history" title="Clean up inspection history" style="color: var(--danger-text); border-color: var(--danger-border); background: var(--danger-subtle);">
+              Reset History
+            </button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table" id="history-table">
+            <thead>
+              <tr>
+                <th>Inspection ID</th>
+                <th>Image Name</th>
+                <th>Dimensions</th>
+                <th>Created (UTC)</th>
+                <th>Status</th>
+                <th>Report</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="history-tbody">
+              <tr><td colspan="7" style="text-align: center; padding: 24px; color: var(--text-muted);">Loading history…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= VIEW 5: METHODOLOGY & BENCHMARK ================= -->
+    <section id="view-about" class="view-panel">
+      <div class="panel-header">
+        <h2>Engineering Methodology & Benchmark Report</h2>
+        <p class="section-desc">Scientific validation on CUBIT-Seg benchmark, physical crack diagnostics, and structural screening boundaries.</p>
+      </div>
+
+      <div class="card-panel methodology-content">
+        <h3>1. Mission & Operational Scope</h3>
+        <p>
+          <strong>Neev</strong> is an AI-powered visual defect screening platform engineered for rapid building facade assessment. Neev detects, segments, and characterizes surface anomalies—including concrete cracks, masonry joint separations, spalling, and weathering patterns—from ordinary photographic captures.
+        </p>
+
+        <h3>2. CUBIT-Seg 14-Architecture Benchmark & Architecture Freeze</h3>
+        <p>
+          Following extensive evaluation across 1,320 annotated facade images in the public CUBIT-Seg benchmark, the backend architecture was officially frozen to prioritize verified engineering precision and cost control:
+        </p>
+
+        <div class="table-wrapper benchmark-table-box">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Architecture</th>
+                <th>Role</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1 Score</th>
+                <th>Mask IoU</th>
+                <th>Mean Latency</th>
+                <th>Cost / Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: var(--bg-surface-tint); font-weight: 600;">
+                <td>Live Meta SAM 3.1</td>
+                <td><span class="badge badge-brand">Primary Production</span></td>
+                <td>80.3%</td>
+                <td>74.6%</td>
+                <td>0.7732</td>
+                <td>0.5248</td>
+                <td>1,454 ms</td>
+                <td>~$0.0025</td>
+              </tr>
+              <tr>
+                <td>SAM + U-Net Hybrid</td>
+                <td><span class="badge badge-muted">High-Recall Option</span></td>
+                <td>71.4%</td>
+                <td>76.3%</td>
+                <td>0.7374</td>
+                <td>0.4812</td>
+                <td>155 ms</td>
+                <td>~$0.0025</td>
+              </tr>
+              <tr>
+                <td>U-Net Standalone</td>
+                <td><span class="badge badge-muted">Offline Edge Fallback</span></td>
+                <td>63.7%</td>
+                <td>28.1%</td>
+                <td>0.3900</td>
+                <td>0.2940</td>
+                <td>124 ms</td>
+                <td>$0.0000</td>
+              </tr>
+              <tr>
+                <td>Mask R-CNN ResNet-50</td>
+                <td>Baseline</td>
+                <td>58.2%</td>
+                <td>49.6%</td>
+                <td>0.5356</td>
+                <td>0.3810</td>
+                <td>210 ms</td>
+                <td>$0.0000</td>
+              </tr>
+              <tr>
+                <td>DeepLabv3+ ResNet-101</td>
+                <td>Baseline</td>
+                <td>61.4%</td>
+                <td>44.8%</td>
+                <td>0.5181</td>
+                <td>0.3650</td>
+                <td>185 ms</td>
+                <td>$0.0000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>3. Physical Crack Diagnostics & Mechanics</h3>
+        <p>
+          When crack candidates are resolved, Neev executes deterministic mathematical morphology:
+        </p>
+        <ul>
+          <li><strong>Skeletonization (Zhang-Suen):</strong> Thins binary defect masks down to a single-pixel central axis to compute 2D centerline pixel path length and tortuosity.</li>
+          <li><strong>Euclidean Distance Transform (EDT):</strong> Computes orthogonal width profiles along the skeleton, yielding maximum pixel width and 95th-percentile width (P95) in image pixels (uncalibrated 2D pixel count; not physical crack aperture or depth).</li>
+          <li><strong>In-Plane Orientation & Geometric Classification:</strong> Computes principal axis angle (0° to 90°). Relates 2D image crack patterns to benchmark reference guidelines (e.g. <em>In-Plane Diagonal Pattern ~45°</em> vs <em>Horizontal Boundary Separation ~0°</em>) citing <span class="code-ref-pill">IS 13935 / FEMA P-154</span> visual screening benchmark references.</li>
+        </ul>
+
+        <h3>4. Muse Wonder 1.0 Multi-Modal Advisory</h3>
+        <p>
+          For critical findings, Neev integrates Muse Wonder 1.0 as a secondary multimodal vision-language verification advisor. Operating with strict budget caps and advisory-only weighting, Wonder provides secondary consensus checks without overriding frozen SAM 3.1 segmentations.
+        </p>
+
+        <h3>5. Strict Engineering Disclaimers & Physical Inspection Mandate</h3>
+        <div style="background: #FFF9ED; border: 1.5px solid #EEDFBA; border-radius: 8px; padding: 18px; margin-top: 14px; font-size: 13.5px; line-height: 1.55; color: #7A530E;">
+          <strong>CRITICAL SAFETY NOTICE:</strong><br>
+          Neev is a preliminary visual screening instrument. Visual findings produced by neural models over 2D photographs cannot determine internal crack depth, rebar corrosion, delamination, seismic vulnerability, or overall structural integrity.
+          <br><br>
+          <strong>Absence of a visual finding is NEVER proof of defect absence.</strong>
+          This software does not certify habitability or compliance with building codes. Every finding flagged by Neev must be verified through on-site physical examination and non-destructive testing (NDT) conducted by a qualified, licensed structural engineer.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Engineering Disclaimer Banner (Anchored at Bottom) -->
+  <aside class="disclaimer-banner" id="global-disclaimer-banner">
+    <span class="notice-tag">NOTICE</span>
+    <span>
+      <strong>Visual screening only — not a structural safety assessment.</strong>
+      Ordinary photos cannot determine crack depth or structural integrity. Physical inspection by a licensed structural engineer is required.
+    </span>
+  </aside>
+
+  <!-- Global Application Footer (Present in All Tabs) -->
+  <footer class="app-global-footer" id="global-app-footer">
+    <div class="product-credit-footer">Made by Devansh with Meta AI</div>
+  </footer>
+
+  <!-- User Feedback Toast Notification -->
+  <div class="toast" id="app-toast"></div>
+
+  <!-- Vanilla Application Script -->
+  <script src="/app.js"></script>
+</body>
+</html>

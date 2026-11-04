@@ -1,0 +1,344 @@
+{
+  "development_set_10": {
+    "baseline": {
+      "mode": "baseline",
+      "description": "Frozen Baseline A Reference (SAM 3.1 Text 'crack')",
+      "images_evaluated": 10,
+      "total_predictions": 14,
+      "total_ground_truths": 36,
+      "true_positives": 9,
+      "false_positives": 5,
+      "false_negatives": 27,
+      "precision": 0.6429,
+      "recall": 0.25,
+      "f1": 0.36,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 6,
+      "cov_50_count": 13,
+      "cov_50_pct": 36.1,
+      "negative_fps": 0,
+      "defect_categories_detected": {
+        "crack": 14
+      },
+      "mean_latency_ms": 188.5,
+      "total_wall_time_s": 3.24,
+      "peak_vram_mb": 0.0,
+      "stage_latency_breakdown_ms": {
+        "sam_whole": 183.05
+      }
+    },
+    "advanced_sam": {
+      "mode": "advanced_sam",
+      "description": "Exp 4 Advanced SAM (Adaptive Tiling + CCS + Guardrails)",
+      "images_evaluated": 10,
+      "total_predictions": 15,
+      "total_ground_truths": 36,
+      "true_positives": 9,
+      "false_positives": 6,
+      "false_negatives": 27,
+      "precision": 0.6,
+      "recall": 0.25,
+      "f1": 0.3529,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 6,
+      "cov_50_count": 13,
+      "cov_50_pct": 36.1,
+      "negative_fps": 0,
+      "defect_categories_detected": {
+        "crack": 15
+      },
+      "mean_latency_ms": 7.9,
+      "total_wall_time_s": 1.39,
+      "peak_vram_mb": 0.0,
+      "stage_latency_breakdown_ms": {
+        "sam_whole": 1.79,
+        "adaptive_tiles": 2.06
+      }
+    },
+    "cv_enhanced_sam": {
+      "mode": "cv_enhanced_sam",
+      "description": "Advanced SAM + CLAHE/Bilateral Enhancement + DSP Ridge Filter",
+      "images_evaluated": 10,
+      "total_predictions": 24,
+      "total_ground_truths": 36,
+      "true_positives": 9,
+      "false_positives": 15,
+      "false_negatives": 27,
+      "precision": 0.375,
+      "recall": 0.25,
+      "f1": 0.3,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 6,
+      "cov_50_count": 13,
+      "cov_50_pct": 36.1,
+      "negative_fps": 6,
+      "defect_categories_detected": {
+        "crack": 24
+      },
+      "mean_latency_ms": 4760.2,
+      "total_wall_time_s": 49.01,
+      "peak_vram_mb": 0.0,
+      "stage_latency_breakdown_ms": {
+        "image_enhancement": 1521.14,
+        "sam_whole": 2.14,
+        "dsp_ridge_filtering": 3226.14,
+        "adaptive_tiles": 1.37
+      }
+    },
+    "facade_context": {
+      "mode": "facade_context",
+      "description": "Advanced SAM + SegFormer CMP Facade Architectural Context Guardrail",
+      "images_evaluated": 10,
+      "total_predictions": 15,
+      "total_ground_truths": 36,
+      "true_positives": 9,
+      "false_positives": 6,
+      "false_negatives": 27,
+      "precision": 0.6,
+      "recall": 0.25,
+      "f1": 0.3529,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 6,
+      "cov_50_count": 13,
+      "cov_50_pct": 36.1,
+      "negative_fps": 0,
+      "defect_categories_detected": {
+        "crack": 15
+      },
+      "mean_latency_ms": 360.0,
+      "total_wall_time_s": 4.86,
+      "peak_vram_mb": 337.6,
+      "stage_latency_breakdown_ms": {
+        "sam_whole": 1.8,
+        "facade_architectural_context": 350.34,
+        "adaptive_tiles": 1.4
+      }
+    },
+    "multidefect_segformer": {
+      "mode": "multidefect_segformer",
+      "description": "Advanced SAM + Specialist SegFormer Crack & Spall Transformer",
+      "images_evaluated": 10,
+      "total_predictions": 532,
+      "total_ground_truths": 36,
+      "true_positives": 11,
+      "false_positives": 521,
+      "false_negatives": 25,
+      "precision": 0.0207,
+      "recall": 0.3056,
+      "f1": 0.0387,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 6,
+      "cov_50_count": 15,
+      "cov_50_pct": 41.7,
+      "negative_fps": 267,
+      "defect_categories_detected": {
+        "crack": 524,
+        "spalling": 8
+      },
+      "mean_latency_ms": 461.4,
+      "total_wall_time_s": 8.34,
+      "peak_vram_mb": 393.8,
+      "stage_latency_breakdown_ms": {
+        "sam_whole": 1.87,
+        "segformer_crack_spall": 448.25,
+        "adaptive_tiles": 2.04
+      }
+    },
+    "sahi_cascaded": {
+      "mode": "sahi_cascaded",
+      "description": "4-Strategy Engine: SAHI Slices + Two-Stage Cascade + Shadow Dual-Path",
+      "images_evaluated": 10,
+      "total_predictions": 15,
+      "total_ground_truths": 36,
+      "true_positives": 9,
+      "false_positives": 6,
+      "false_negatives": 27,
+      "precision": 0.6,
+      "recall": 0.25,
+      "f1": 0.3529,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 6,
+      "cov_50_count": 13,
+      "cov_50_pct": 36.1,
+      "negative_fps": 0,
+      "defect_categories_detected": {
+        "crack": 15
+      },
+      "mean_latency_ms": 2629.3,
+      "total_wall_time_s": 27.62,
+      "peak_vram_mb": 251.5,
+      "stage_latency_breakdown_ms": {
+        "image_enhancement": 1361.37,
+        "sam_whole": 2.08,
+        "facade_architectural_context": 259.75,
+        "adaptive_tiles": 1.4,
+        "sahi_native_slices": 1227.24,
+        "shadow_dual_path": 152.2
+      }
+    },
+    "full_inspection": {
+      "mode": "full_inspection",
+      "description": "Full Capability Engine: 4 Strategies + Physical Multi-Defect Classification",
+      "images_evaluated": 10,
+      "total_predictions": 15,
+      "total_ground_truths": 36,
+      "true_positives": 9,
+      "false_positives": 6,
+      "false_negatives": 27,
+      "precision": 0.6,
+      "recall": 0.25,
+      "f1": 0.3529,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 6,
+      "cov_50_count": 13,
+      "cov_50_pct": 36.1,
+      "negative_fps": 0,
+      "defect_categories_detected": {
+        "crack": 15
+      },
+      "mean_latency_ms": 2751.2,
+      "total_wall_time_s": 28.8,
+      "peak_vram_mb": 251.5,
+      "stage_latency_breakdown_ms": {
+        "image_enhancement": 1423.62,
+        "sam_whole": 2.05,
+        "facade_architectural_context": 265.68,
+        "adaptive_tiles": 1.53,
+        "sahi_native_slices": 1284.27,
+        "shadow_dual_path": 150.79
+      }
+    }
+  },
+  "validation_set_19": {
+    "baseline": {
+      "mode": "baseline",
+      "description": "Frozen Baseline A Reference (SAM 3.1 text prompt 'crack')",
+      "images_evaluated": 19,
+      "total_predictions": 24,
+      "total_ground_truths": 30,
+      "true_positives": 14,
+      "false_positives": 10,
+      "false_negatives": 16,
+      "precision": 0.5833,
+      "recall": 0.4667,
+      "f1": 0.5185,
+      "iou_ge_010": 6,
+      "iou_ge_025": 5,
+      "iou_ge_050": 0,
+      "cov_50_count": 22,
+      "cov_50_pct": 73.3,
+      "negative_fps": 1,
+      "defect_categories_detected": {
+        "crack": 24
+      },
+      "mean_latency_ms": 7.3,
+      "total_wall_time_s": 2.85,
+      "peak_vram_mb": 8.1,
+      "stage_latency_breakdown_ms": {
+        "sam_whole": 2.0
+      }
+    },
+    "advanced_sam": {
+      "mode": "advanced_sam",
+      "description": "Exp 4 Advanced SAM (Adaptive Tiling + CCS + Guardrails)",
+      "images_evaluated": 19,
+      "total_predictions": 28,
+      "total_ground_truths": 30,
+      "true_positives": 15,
+      "false_positives": 13,
+      "false_negatives": 15,
+      "precision": 0.5357,
+      "recall": 0.5,
+      "f1": 0.5172,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 1,
+      "cov_50_count": 23,
+      "cov_50_pct": 76.7,
+      "negative_fps": 1,
+      "defect_categories_detected": {
+        "crack": 28
+      },
+      "mean_latency_ms": 7.9,
+      "total_wall_time_s": 3.02,
+      "peak_vram_mb": 8.1,
+      "stage_latency_breakdown_ms": {
+        "sam_whole": 2.1,
+        "adaptive_tiles": 1.12
+      }
+    },
+    "sahi_cascaded": {
+      "mode": "sahi_cascaded",
+      "description": "4-Strategy Engine: SAHI Slices + Two-Stage Cascade + Shadow Dual-Path",
+      "images_evaluated": 19,
+      "total_predictions": 30,
+      "total_ground_truths": 30,
+      "true_positives": 15,
+      "false_positives": 15,
+      "false_negatives": 15,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 1,
+      "cov_50_count": 23,
+      "cov_50_pct": 76.7,
+      "negative_fps": 3,
+      "defect_categories_detected": {
+        "crack": 30
+      },
+      "mean_latency_ms": 3090.2,
+      "total_wall_time_s": 61.7,
+      "peak_vram_mb": 251.5,
+      "stage_latency_breakdown_ms": {
+        "image_enhancement": 1752.31,
+        "sam_whole": 2.53,
+        "facade_architectural_context": 249.9,
+        "shadow_dual_path": 394.57,
+        "adaptive_tiles": 0.89,
+        "sahi_native_slices": 960.78
+      }
+    },
+    "full_inspection": {
+      "mode": "full_inspection",
+      "description": "Final Integrated Capability Upgrade Engine",
+      "images_evaluated": 19,
+      "total_predictions": 30,
+      "total_ground_truths": 30,
+      "true_positives": 15,
+      "false_positives": 15,
+      "false_negatives": 15,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "iou_ge_010": 7,
+      "iou_ge_025": 6,
+      "iou_ge_050": 1,
+      "cov_50_count": 23,
+      "cov_50_pct": 76.7,
+      "negative_fps": 3,
+      "defect_categories_detected": {
+        "crack": 30
+      },
+      "mean_latency_ms": 3146.5,
+      "total_wall_time_s": 62.68,
+      "peak_vram_mb": 251.5,
+      "stage_latency_breakdown_ms": {
+        "image_enhancement": 1785.14,
+        "sam_whole": 2.6,
+        "facade_architectural_context": 234.28,
+        "shadow_dual_path": 425.17,
+        "adaptive_tiles": 0.87,
+        "sahi_native_slices": 962.24
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+ablation_id,architecture_mode,description,precision,recall,f1,tp,fp,gt_coverage_50,mean_latency_ms,peak_vram_mb
+C1_SAM_Baseline,baseline,Base SAM 3.1 text prompt 'crack',0.6429,0.25,0.36,9,5,36.1,165.5,0.0
+C2_SAM_MultiScale,multiscale_sam,SAM Baseline + Fixed 2x2 regional tiling,0.5625,0.25,0.3462,9,7,36.1,6.2,0.0
+C3_SAM_Adaptive_CCS,advanced_sam,SAM + Resolution-adaptive tiling + Cross-Scale Containment Suppression,0.6,0.25,0.3529,9,6,36.1,6.3,0.0
+C4_SAHI_Native_Slices,sahi_standalone,SAM + 1:1 Native Slices (SAHI 800px),0.0004,0.0278,0.0007,1,2819,2.8,1218.3,237.3
+C5_Facade_Context_Gating,facade_context,Advanced SAM + SegFormer Facade Architectural Boundary Guardrail,0.6,0.25,0.3529,9,6,36.1,316.8,337.6
+C6_Cascade_DualPath,sahi_cascaded,Advanced SAM + SAHI + Two-Stage Cascade + Shadow Dual-Path,0.6,0.25,0.3529,9,6,36.1,2404.5,251.5
+C7_Precision_Gated_Hybrid,hybrid_precision_gated,Full Proposed: SAM + Precision-Gated SegFormer + SAHI Cascade,0.5625,0.25,0.3462,9,7,36.1,1894.4,251.5

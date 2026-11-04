@@ -1,0 +1,15 @@
+architecture,cold_start_s,mean_warm_latency_ms,peak_vram_mb,preprocessing_ms,candidate_generation_ms,segmentation_inference_ms,postprocessing_context_ms
+baseline,0.03,165.5,0.0,0.0,161.08,0.0,0.0
+multiscale_sam,0.002,6.2,0.0,0.0,1.86,0.0,0.0
+advanced_sam,0.002,6.3,0.0,0.0,2.67,0.0,0.0
+unet_standalone,0.002,1166.7,1750.5,0.0,0.0,1162.96,0.0
+hybrid,0.003,478.1,1399.4,0.0,2.26,471.66,0.0
+hybrid_verified,0.003,473.4,1399.4,0.0,2.07,467.01,0.0
+dsp_frangi_sam,0.003,2876.0,0.0,0.0,1.58,0.0,0.0
+cv_enhanced_sam,0.002,4257.1,0.0,1235.59,1.87,0.0,0.0
+facade_context,0.002,316.8,337.6,0.0,2.91,0.0,309.03
+multidefect_segformer,0.002,394.9,393.8,0.0,3.05,386.83,0.0
+sahi_standalone,0.002,1218.3,237.3,0.0,0.0,0.0,0.0
+sahi_cascaded,0.002,2404.5,251.5,1233.64,3.38,1191.85,351.67
+full_inspection,0.003,2326.2,251.5,1208.5,3.05,1155.75,336.51
+hybrid_precision_gated,0.002,1894.4,251.5,0.0,3.12,1171.37,1932.31

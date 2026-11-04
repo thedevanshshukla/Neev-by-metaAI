@@ -1,0 +1,19 @@
+<View>
+  <Image name="image" value="$image" zoom="true" zoomControl="true" rotateControl="true"/>
+  <RectangleLabels name="label" toName="image">
+    <Label value="building" background="#3366FF"/>
+    <Label value="window" background="#00D2D3"/>
+    <Label value="column" background="#FF9F43"/>
+    <Label value="balcony" background="#10AC84"/>
+    <Label value="open_ground_floor" background="#EE5253"/>
+    <Label value="floor_slab" background="#5F27CD"/>
+    <Label value="car" background="#54A0FF"/>
+    <Label value="shutter" background="#48DBFB"/>
+    <Label value="rooftop_unit" background="#C8D6E5"/>
+    <Label value="hoarding" background="#FF6B6B"/>
+    <Label value="parapet" background="#1DD1A1"/>
+    <Label value="crack" background="#FF4757"/>
+    <Label value="spalling" background="#FFA502"/>
+    <Label value="rebar" background="#2ED573"/>
+  </RectangleLabels>
+</View>

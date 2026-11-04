@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Neev crack mask pilot annotator (offline, native coords)</title>
+<style>
+  body { font-family: sans-serif; margin: 12px; }
+  #bar { position: sticky; top: 0; background: #fff; padding: 8px 0;
+         border-bottom: 1px solid #ccc; }
+  button, select { margin: 2px; }
+  #warn { color: #a00; font-weight: bold; }
+  #scroll { overflow: auto; max-height: 80vh; border: 1px solid #999;
+            margin-top: 8px; }
+  canvas { image-rendering: auto; cursor: crosshair; display: block; }
+  #info { margin-top: 6px; font-size: 13px; }
+  .inst { cursor: pointer; }
+  .inst.sel { background: #ffeca8; }
+</style>
+</head>
+<body>
+<div id="bar">
+  <label>Image:
+    <select id="imgSel"></select>
+  </label>
+  <input type="file" id="file" accept="image/*">
+  <button id="close">Close polygon (Enter)</button>
+  <button id="undo">Undo vertex</button>
+  <button id="thin">thin: off</button>
+  <button id="delInst">Delete selected</button>
+  <button id="neg">No visible cracks: off</button>
+  <button id="export">Export gt_masks.v1.json</button>
+  <span id="warn"></span>
+</div>
+<div id="scroll"><canvas id="cv"></canvas></div>
+<div id="info"></div>
+<ol id="list"></ol>
+<script>
+"use strict";
+// Pilot manifest (ids, Label Studio task ids, native dims). Paths are for
+// the human to locate files; the pixels load through the file picker.
+const IMAGES = [
+  {id: "cr4", task: 7,  file: "dataset/real_world/cracks/cr4.jpeg", w: 638, h: 480},
+  {id: "cr5", task: 8,  file: "dataset/real_world/cracks/cr5.jpeg", w: 554, h: 554},
+  {id: "dm1", task: 2,  file: "dataset/real_world/confusing_category/dm1.png", w: 2400, h: 1792},
+  {id: "k1",  task: 13, file: "dataset/real_world/Difficult_Visibility/k1.png", w: 2752, h: 1536},
+  {id: "h2",  task: 10, file: "dataset/real_world/Crack_Detection_Edge_Cases/h2.png", w: 1448, h: 1086},
+  {id: "i1",  task: 21, file: "dataset/real_world/Multiple_Defects_in_One_Building/i1.png", w: 2752, h: 1536},
+  {id: "in1", task: 17, file: "dataset/real_world/intact/in1.png", w: 2752, h: 1536, negative: true}
+];
+const state = {};
+IMAGES.forEach(m => { state[m.id] = {instances: [], neg: !!m.negative}; });
+let cur = IMAGES[0], img = null, working = [], thinNext = false, sel = -1;
+
+const cv = document.getElementById("cv"),
+      ctx = cv.getContext("2d"),
+      info = document.getElementById("info"),
+      warn = document.getElementById("warn"),
+      list = document.getElementById("list"),
+      imgSel = document.getElementById("imgSel");
+IMAGES.forEach(m => {
+  const o = document.createElement("option");
+  o.value = m.id; o.textContent = `${m.id} (${m.w}x${m.h}) ${m.file}`;
+  imgSel.appendChild(o);
+});
+
+function checkZoom() {
+  warn.textContent = (cv.clientWidth && cv.clientWidth !== cv.width)
+    ? "WARNING: canvas is scaled (browser zoom?). Set zoom to 100% so clicks equal native pixels."
+    : "";
+}
+function redraw() {
+  cv.width = cur.w; cv.height = cur.h;
+  if (img) ctx.drawImage(img, 0, 0);
+  const st = state[cur.id];
+  st.instances.forEach((inst, k) => {
+    ctx.strokeStyle = (k === sel) ? "#ff0" : "#f00";
+    ctx.lineWidth = 2; ctx.beginPath();
+    inst.points.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]));
+    ctx.closePath(); ctx.stroke();
+    ctx.fillStyle = "#f00";
+    inst.points.forEach(p => ctx.fillRect(p[0] - 2, p[1] - 2, 5, 5));
+  });
+  if (working.length) {
+    ctx.strokeStyle = "#0ff"; ctx.lineWidth = 2; ctx.beginPath();
+    working.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]));
+    ctx.stroke();
+    ctx.fillStyle = "#0ff";
+    working.forEach(p => ctx.fillRect(p[0] - 2, p[1] - 2, 5, 5));
+  }
+  list.innerHTML = "";
+  st.instances.forEach((inst, k) => {
+    const li = document.createElement("li");
+    li.className = "inst" + (k === sel ? " sel" : "");
+    li.textContent = `${cur.id}-c${k + 1}: ${inst.points.length} vertices` +
+      (inst.thin ? " [thin]" : "");
+    li.onclick = () => { sel = (sel === k) ? -1 : k; redraw(); };
+    list.appendChild(li);
+  });
+  const n = Object.values(state).reduce((a, s) => a + s.instances.length, 0);
+  info.textContent = `${cur.id}: ${st.instances.length} instance(s)` +
+    (st.neg ? " [marked: no visible cracks]" : "") +
+    ` | working polygon: ${working.length} vertices | total: ${n}` +
+    ` | file: ${cur.file}`;
+  checkZoom();
+}
+imgSel.onchange = () => {
+  cur = IMAGES.find(m => m.id === imgSel.value);
+  img = null; working = []; sel = -1;
+  document.getElementById("file").value = "";
+  document.getElementById("neg").textContent =
+    "No visible cracks: " + (state[cur.id].neg ? "on" : "off");
+  redraw();
+};
+document.getElementById("file").onchange = ev => {
+  const f = ev.target.files[0];
+  if (!f) return;
+  const url = URL.createObjectURL(f);
+  const im = new Image();
+  im.onload = () => {
+    if (im.naturalWidth !== cur.w || im.naturalHeight !== cur.h) {
+      warn.textContent = `DIM MISMATCH: file is ${im.naturalWidth}x${im.naturalHeight}, ` +
+        `expected ${cur.w}x${cur.h}. Pick the file matching ${cur.file}.`;
+      return;
+    }
+    img = im; redraw();
+  };
+  im.src = url;
+};
+cv.onmousemove = ev => {
+  const r = cv.getBoundingClientRect();
+  const x = Math.round(ev.clientX - r.left), y = Math.round(ev.clientY - r.top);
+  cv.title = `(${x}, ${y})`;
+};
+cv.onclick = ev => {
+  if (!img) { alert("Load the image file first."); return; }
+  if (state[cur.id].neg) { alert("Image is marked 'no visible cracks'."); return; }
+  const r = cv.getBoundingClientRect();
+  working.push([Math.round(ev.clientX - r.left), Math.round(ev.clientY - r.top)]);
+  redraw();
+};
+cv.ondblclick = ev => { ev.preventDefault(); closePoly(); };
+function closePoly() {
+  if (working.length < 3) { alert("Need at least 3 vertices."); return; }
+  state[cur.id].instances.push({points: working, thin: thinNext});
+  working = []; thinNext = false;
+  document.getElementById("thin").textContent = "thin: off";
+  redraw();
+}
+document.getElementById("close").onclick = closePoly;
+document.getElementById("undo").onclick = () => { working.pop(); redraw(); };
+document.getElementById("thin").onclick = ev => {
+  thinNext = !thinNext;
+  ev.target.textContent = "thin: " + (thinNext ? "on" : "off");
+};
+document.getElementById("delInst").onclick = () => {
+  if (sel < 0) return;
+  state[cur.id].instances.splice(sel, 1); sel = -1; redraw();
+};
+document.getElementById("neg").onclick = ev => {
+  const st = state[cur.id];
+  st.neg = !st.neg;
+  if (st.neg) { st.instances = []; working = []; }
+  ev.target.textContent = "No visible cracks: " + (st.neg ? "on" : "off");
+  redraw();
+};
+document.addEventListener("keydown", ev => {
+  if (ev.key === "Enter") closePoly();
+  else if (ev.key === "Escape") { working = []; redraw(); }
+});
+document.getElementById("export").onclick = () => {
+  const out = {
+    version: 1,
+    spec: "eval/mask_pilot/ANNOTATION_SPEC.md",
+    images: IMAGES.map(m => ({
+      image_id: m.id, task_id: m.task, width: m.w, height: m.h,
+      negative: state[m.id].neg,
+      instances: state[m.id].instances.map((inst, k) => ({
+        instance_id: `${m.id}-c${k + 1}`,
+        thin: !!inst.thin,
+        polygons: [inst.points.map(p => [p[0], p[1]])]
+      }))
+    }))
+  };
+  const blob = new Blob([JSON.stringify(out, null, 2)], {type: "application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "gt_masks.v1.json";
+  a.click();
+};
+redraw();
+</script>
+</body>
+</html>

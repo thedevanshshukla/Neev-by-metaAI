@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "dataset": "example-two-buildings",
+  "annotator": "example",
+  "note": "Format example only. Not measurements; replace with real Test B labels.",
+  "buildings": [
+    {
+      "building_id": "LN-B1",
+      "image": "f_0132.jpg",
+      "labels": {
+        "open_ground_storey": "yes",
+        "storeys": 4,
+        "heavy_overhang": "yes",
+        "pounding": "no",
+        "falling_hazards": "unclear",
+        "short_column": "unclear",
+        "vertical_irregularity": "no",
+        "apparent_quality": "unclear",
+        "construction_type": "unclear"
+      }
+    },
+    {
+      "building_id": "LN-B2",
+      "image": "f_0140.jpg",
+      "labels": {
+        "open_ground_storey": "no",
+        "storeys": 3,
+        "heavy_overhang": "no",
+        "pounding": "no",
+        "falling_hazards": "no",
+        "short_column": "no",
+        "vertical_irregularity": "no",
+        "apparent_quality": "no",
+        "construction_type": "unclear"
+      }
+    }
+  ]
+}

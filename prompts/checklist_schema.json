@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Neev judge reply: storeys plus one checklist entry per warning sign",
+  "type": "object",
+  "required": ["storeys", "checklist"],
+  "properties": {
+    "storeys": {
+      "type": "object",
+      "required": ["count"],
+      "properties": {
+        "count": {
+          "description": "Total floors judged from the photos, or null when unclear.",
+          "type": ["integer", "null"],
+          "minimum": 1
+        }
+      }
+    },
+    "checklist": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "answer", "evidence", "reason"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "open_ground_storey",
+              "heavy_overhang",
+              "pounding",
+              "falling_hazards",
+              "short_column",
+              "vertical_irregularity",
+              "apparent_quality",
+              "construction_type"
+            ]
+          },
+          "answer": {"type": "string", "enum": ["yes", "no", "unclear"]},
+          "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+          "evidence": {"type": ["string", "null"]},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

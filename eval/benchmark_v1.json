@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "name": "neev-sam31-v1",
+  "coverage": {
+    "_note": "Every category is insufficient-labels until a human draws boxes. Empty labels {} means fully unlabelled: excluded from all metrics, never counted negative.",
+    "building": "insufficient-labels",
+    "car": "insufficient-labels",
+    "open_ground_floor": "insufficient-labels",
+    "shutter": "insufficient-labels",
+    "window": "insufficient-labels",
+    "column": "insufficient-labels",
+    "balcony": "insufficient-labels",
+    "floor_slab": "insufficient-labels",
+    "rooftop_unit": "insufficient-labels",
+    "hoarding": "insufficient-labels",
+    "parapet": "insufficient-labels",
+    "crack": "insufficient-labels: crack_wall.jpeg is a thin-crack positive CANDIDATE, still unlabelled; crack_wall2.jpeg is SPALLING, not a thin crack (see spalling); no negatives labelled either",
+    "spalling": "insufficient-labels: crack_wall2.jpeg shows a spalled masonry corner, still unlabelled; no prompt targets this category yet",
+    "rebar": "insufficient-labels: no positive examples anywhere yet; nothing labelled"
+  },
+  "images": [
+    {
+      "image_id": "villa-01",
+      "path": "photo_Sample/images.jpeg",
+      "sha256": "e03fbd1638f5822a319ccfe90285cba3e5edeb6b1241019c1d1c7b58a7649870",
+      "width": 447,
+      "height": 447,
+      "labels": {}
+    },
+    {
+      "image_id": "chawl-frontal-01",
+      "path": "photo_Sample/img2.jpeg",
+      "sha256": "6dd57f7a71e5c17320dfc06481793c603a01bd8251e345afbaf9e69d75efdbee",
+      "width": 437,
+      "height": 702,
+      "labels": {}
+    },
+    {
+      "image_id": "chawl-corner-01",
+      "path": "photo_Sample/img3.jpeg",
+      "sha256": "403c37fd46b2cd5c737a4a3b4988e5ceb6732d49c2ae34f0ef1b74acf2115338",
+      "width": 437,
+      "height": 702,
+      "labels": {}
+    },
+    {
+      "image_id": "lane-oblique-01",
+      "path": "photo_Sample/img4.jpeg",
+      "sha256": "7ce5e2392276b8432c639e577554f2ce184b94a190e4acb1b5bd5a6f66239503",
+      "width": 452,
+      "height": 678,
+      "labels": {}
+    },
+    {
+      "image_id": "terraces-01",
+      "path": "photo_Sample/img5.jpeg",
+      "sha256": "8ab042c4bf186268c5bdb2d211658b421e7f0fa05a329b397b1c4dd374064d79",
+      "width": 536,
+      "height": 573,
+      "labels": {}
+    },
+    {
+      "image_id": "crack-wall-closeup-01",
+      "path": "photo_Sample/crack_wall.jpeg",
+      "sha256": "f7049029cf7a17f9aa6fcf959416fa05dcbc475bc1cece5906ae670df0f264a1",
+      "width": 738,
+      "height": 414,
+      "labels": {}
+    },
+    {
+      "image_id": "damage-corner-01",
+      "path": "photo_Sample/crack_wall2.jpeg",
+      "sha256": "1149bb27e9531ede95b5a0fd9de009e34234bd78b926ac431e9c97465acfcf0c",
+      "width": 480,
+      "height": 359,
+      "labels": {}
+    },
+    {
+      "image_id": "portrait-outlier-01",
+      "path": "photo_Sample/outlier1.jpeg",
+      "sha256": "b2a82b26689b345483ae1c96e52fd37a4ab760aeeda3b556978659b0dc720d24",
+      "width": 399,
+      "height": 501,
+      "labels": {}
+    }
+  ]
+}

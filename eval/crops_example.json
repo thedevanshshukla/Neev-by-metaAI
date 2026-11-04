@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "_comment": "Template + one provisional crop. Provisional = drawn but not eyeballed; only approved crops materialize by default. Never auto-generate entries.",
+  "crops": [
+    {
+      "crop_id": "img2-stain-band",
+      "image": "photo_Sample/img2.jpeg",
+      "box": {"x0": 100, "y0": 0, "x1": 437, "y1": 200},
+      "purpose": "Close-up of stained upper render for future crack-vs-stain work",
+      "status": "approved"
+    }
+  ]
+}
