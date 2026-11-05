@@ -47,6 +47,13 @@ MAX_PHRASES_PER_RUN = 32
 
 _UNET_ADAPTER = None
 
+try:
+    import spaces
+    _gpu_decorator = spaces.GPU
+except (ImportError, Exception):
+    def _gpu_decorator(func):
+        return func
+
 
 def _get_unet_adapter():
     global _UNET_ADAPTER
@@ -56,6 +63,7 @@ def _get_unet_adapter():
     return _UNET_ADAPTER
 
 
+@_gpu_decorator
 def _run_unet_detections(raw: bytes) -> list[dict[str, Any]]:
     import io
     import logging
