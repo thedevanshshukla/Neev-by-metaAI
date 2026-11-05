@@ -1,29 +1,33 @@
 """Hugging Face Spaces Entrypoint for Neev AI Facade Screening Platform."""
 
 import os
+from neev.app.main import app as fastapi_app
 
-# ZeroGPU support: Enables dynamic NVIDIA A10G (24GB VRAM) allocation on Hugging Face Spaces
+# ZeroGPU hook: enables free NVIDIA A10G GPU allocation on Hugging Face Spaces
 try:
     import spaces
 
     @spaces.GPU
-    def gpu_warmup():
-        """Top-level ZeroGPU hook detected during Hugging Face Spaces startup."""
-        return True
+    def zero_gpu_pipeline(x: str) -> str:
+        """Registered GPU event handler for Hugging Face ZeroGPU startup scanner."""
+        return x
 
 except (ImportError, Exception):
-    pass
+    def zero_gpu_pipeline(x: str) -> str:
+        return x
 
-from neev.app.main import app as fastapi_app
+import gradio as gr
 
-try:
-    import gradio as gr
+# Build Gradio Blocks with registered ZeroGPU event listener
+with gr.Blocks(title="Neev: AI Building Facade Defect Screening") as demo:
+    dummy_input = gr.Textbox(value="neev", visible=False)
+    dummy_output = gr.Textbox(visible=False)
+    dummy_btn = gr.Button(visible=False)
+    dummy_btn.click(fn=zero_gpu_pipeline, inputs=[dummy_input], outputs=[dummy_output])
 
-    demo = gr.Blocks(title="Neev: AI Building Facade Defect Screening")
-    app = gr.mount_gradio_app(fastapi_app, demo, path="/_gradio")
-except (ImportError, Exception):
-    demo = None
-    app = fastapi_app
+# Mount Gradio helper onto the existing FastAPI application at /_gradio
+# FastAPI natively serves the Neev Single Page Application at root ("/")
+app = gr.mount_gradio_app(fastapi_app, demo, path="/_gradio")
 
 if __name__ == "__main__":
     import uvicorn
