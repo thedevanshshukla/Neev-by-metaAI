@@ -33,3 +33,5 @@ scratch_*.py
 p0_*.txt
 pytest-of-*/
 *.log
+
+cloudflared.exe
