@@ -92,6 +92,15 @@ def create_app(
     runs = RunStore(root)
     app = FastAPI(title="Neev inspection app")
 
+    from fastapi.middleware.cors import CORSMiddleware
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+
     @app.api_route("/health", methods=["GET", "HEAD"])
     def health() -> dict[str, Any]:
         return {

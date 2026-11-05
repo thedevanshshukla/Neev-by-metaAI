@@ -1,3 +1,14 @@
+---
+title: Neev AI Building Facade Defect Screening
+emoji: 🏢
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+sdk_version: 4.44.0
+app_file: app.py
+pinned: false
+---
+
 # Neev experimentation harness
 
 Validate the core AI capabilities behind Neev (see `docs.md` for the full
