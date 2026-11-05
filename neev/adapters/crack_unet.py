@@ -112,9 +112,11 @@ class CrackUNetAdapter:
         h_img, w_img, _ = image_rgb.shape
         t0 = time.perf_counter()
 
+        # Keep resolution and overlap constrained on CPU to prevent cloud 502 gateway timeouts and OOM kills on 512MB RAM
+        limit_dim = 896 if self.device.type == "cpu" else 1536
         max_dim = max(h_img, w_img)
-        if max_dim > 1536:
-            scale = 1536.0 / max_dim
+        if max_dim > limit_dim:
+            scale = limit_dim / max_dim
             proc_w = int(round(w_img * scale))
             proc_h = int(round(h_img * scale))
             proc_rgb = cv2.resize(image_rgb, (proc_w, proc_h), interpolation=cv2.INTER_AREA)
@@ -123,8 +125,10 @@ class CrackUNetAdapter:
             proc_w, proc_h = w_img, h_img
             proc_rgb = image_rgb
 
+        eff_overlap = min(overlap, 0.20) if self.device.type == "cpu" else overlap
+
         # Compute number of tiles planned
-        stride = int(self.settings.inference.patch_size * (1.0 - overlap))
+        stride = int(self.settings.inference.patch_size * (1.0 - eff_overlap))
         if max(proc_h, proc_w) <= self.settings.inference.patch_size:
             n_tiles = 1
         else:
@@ -141,7 +145,7 @@ class CrackUNetAdapter:
             n_tiles = len(y_starts) * len(x_starts)
 
         probs, binary, crack_ratio = self.predictor.predict_large_image(
-            proc_rgb, threshold=threshold, overlap=overlap
+            proc_rgb, threshold=threshold, overlap=eff_overlap
         )
         latency = time.perf_counter() - t0
 

@@ -45,18 +45,27 @@ def default_prompts() -> list[str]:
 # Largest custom phrase list accepted per run call (cost guardrail).
 MAX_PHRASES_PER_RUN = 32
 
+_UNET_ADAPTER = None
+
+
+def _get_unet_adapter():
+    global _UNET_ADAPTER
+    if _UNET_ADAPTER is None:
+        from neev.adapters.crack_unet import CrackUNetAdapter
+        _UNET_ADAPTER = CrackUNetAdapter()
+    return _UNET_ADAPTER
+
 
 def _run_unet_detections(raw: bytes) -> list[dict[str, Any]]:
     import io
     import logging
     import numpy as np
     from PIL import Image
-    from neev.adapters.crack_unet import CrackUNetAdapter
 
     logger = logging.getLogger("neev.runner")
     try:
         pil_img = Image.open(io.BytesIO(raw)).convert("RGB")
-        unet = CrackUNetAdapter()
+        unet = _get_unet_adapter()
         res = unet.segment(np.array(pil_img))
         kept = []
         for i, inst in enumerate(res.instances):

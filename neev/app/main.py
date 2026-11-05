@@ -92,7 +92,7 @@ def create_app(
     runs = RunStore(root)
     app = FastAPI(title="Neev inspection app")
 
-    @app.get("/health")
+    @app.api_route("/health", methods=["GET", "HEAD"])
     def health() -> dict[str, Any]:
         return {
             "status": "ok",
@@ -287,15 +287,15 @@ def create_app(
                 status_code=404, content={"detail": "frontend not installed"})
         return FileResponse(path, media_type=media_type)
 
-    @app.get("/", response_class=HTMLResponse)
+    @app.api_route("/", methods=["GET", "HEAD"], response_class=HTMLResponse)
     async def index():
         return await _static("index.html", "text/html")
 
-    @app.get("/app.js")
+    @app.api_route("/app.js", methods=["GET", "HEAD"])
     async def app_js():
         return await _static("app.js", "application/javascript")
 
-    @app.get("/styles.css")
+    @app.api_route("/styles.css", methods=["GET", "HEAD"])
     async def styles_css():
         return await _static("styles.css", "text/css")
 
