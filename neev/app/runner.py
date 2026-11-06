@@ -27,6 +27,11 @@ from neev.adapters.sam31 import (
     build_image_request,
     sanitized_request,
 )
+from neev.app.memory_guard import (
+    InsufficientRAMError,
+    check_ram_headroom,
+    force_cleanup,
+)
 from neev.app.store import InspectionStore, io_lock, utcnow
 from neev.config import Config, auth_headers
 from neev.evidence.priority import TINY_AREA_FRAC
@@ -72,9 +77,11 @@ def _run_unet_detections(raw: bytes) -> list[dict[str, Any]]:
 
     logger = logging.getLogger("neev.runner")
     try:
+        check_ram_headroom(estimated_need_mb=250.0)
         pil_img = Image.open(io.BytesIO(raw)).convert("RGB")
         unet = _get_unet_adapter()
         res = unet.segment(np.array(pil_img))
+        del pil_img
         kept = []
         for i, inst in enumerate(res.instances):
             kept.append({
@@ -88,8 +95,13 @@ def _run_unet_detections(raw: bytes) -> list[dict[str, Any]]:
                 "mask_height": inst.box["y1"] - inst.box["y0"],
                 "mask_encoding": "one_bit",
             })
+        force_cleanup()
         return kept
+    except InsufficientRAMError:
+        force_cleanup()
+        raise
     except Exception as exc:
+        force_cleanup()
         logger.error("U-Net crack segmentation failed during inspection: %s", exc, exc_info=True)
         return []
 
@@ -152,6 +164,42 @@ def normalize_phrases(phrases: list[str] | None) -> list[str]:
     return cleaned
 
 
+def _build_ram_fallback_record(
+    inspections: InspectionStore,
+    inspection_id: str,
+    architecture: str,
+    error_detail: str,
+) -> dict[str, Any]:
+    """Generates an explicit insufficient_ram fallback record to keep server online."""
+    record = inspections.get(inspection_id)
+    record["status"] = "insufficient_ram"
+    record["error"] = "Not enough RAM available (peaked near 4GB limit). Server remains online."
+    record["audit"] = {
+        "selected_architecture": architecture,
+        "actual_architecture_executed": "none",
+        "model_id": "none",
+        "model_version": "1.0",
+        "inference_status": "insufficient_ram",
+        "fallback_reason": error_detail,
+        "cache_usage": "none",
+        "wonder_mode": "disabled",
+    }
+    record["run"] = {
+        "created_utc": utcnow(),
+        "confirm_live": False,
+        "phrases": [],
+        "cells": [],
+        "cache_hits": 0,
+        "live_calls": 0,
+        "failures": 1,
+        "model": "none",
+        "error": "Not enough RAM available (peaked near 4GB limit). Memory safely freed.",
+        "merged": {},
+    }
+    with io_lock:
+        return inspections.update(inspection_id, record)
+
+
 def execute_run(
     inspections: InspectionStore,
     runs: RunStore,
@@ -176,24 +224,49 @@ def execute_run(
     Safety rules (confirm_live gate, no retries, per-cell failures)
     apply identically to every view of every strategy.
     """
-    if strategy is None or strategy == prov.STRATEGY_SINGLE:
-        return _execute_single(inspections, runs, inspection_id, config,
-                               confirm_live=confirm_live, phrases=phrases,
-                               transport=transport, timeout=timeout,
-                               architecture=architecture,
-                               allow_offline_fallback=allow_offline_fallback,
-                               wonder_mode=wonder_mode)
-    if strategy == prov.STRATEGY_MULTIVIEW:
-        return _execute_multiview(inspections, runs, inspection_id, config,
-                                  confirm_live=confirm_live, phrases=phrases,
-                                  transport=transport, timeout=timeout,
-                                  allow_reinspect=allow_reinspect,
-                                  architecture=architecture,
-                                  allow_offline_fallback=allow_offline_fallback,
-                                  wonder_mode=wonder_mode)
-    raise BadStrategy(f"unknown strategy: {strategy!r} "
-                      f"(want {prov.STRATEGY_SINGLE!r} "
-                      f"or {prov.STRATEGY_MULTIVIEW!r})")
+    import logging
+    logger = logging.getLogger("neev.runner")
+
+    try:
+        check_ram_headroom(estimated_need_mb=250.0)
+
+        if strategy is None or strategy == prov.STRATEGY_SINGLE:
+            return _execute_single(inspections, runs, inspection_id, config,
+                                   confirm_live=confirm_live, phrases=phrases,
+                                   transport=transport, timeout=timeout,
+                                   architecture=architecture,
+                                   allow_offline_fallback=allow_offline_fallback,
+                                   wonder_mode=wonder_mode)
+        if strategy == prov.STRATEGY_MULTIVIEW:
+            try:
+                check_ram_headroom(estimated_need_mb=500.0)
+            except InsufficientRAMError:
+                logger.warning(
+                    "RAM headroom tight for multi-view; safely down-shifting to single-view to stay under 4GB peak limit."
+                )
+                return _execute_single(inspections, runs, inspection_id, config,
+                                       confirm_live=confirm_live, phrases=phrases,
+                                       transport=transport, timeout=timeout,
+                                       architecture=architecture,
+                                       allow_offline_fallback=allow_offline_fallback,
+                                       wonder_mode=wonder_mode)
+
+            return _execute_multiview(inspections, runs, inspection_id, config,
+                                      confirm_live=confirm_live, phrases=phrases,
+                                      transport=transport, timeout=timeout,
+                                      allow_reinspect=allow_reinspect,
+                                      architecture=architecture,
+                                      allow_offline_fallback=allow_offline_fallback,
+                                      wonder_mode=wonder_mode)
+        raise BadStrategy(f"unknown strategy: {strategy!r} "
+                          f"(want {prov.STRATEGY_SINGLE!r} "
+                          f"or {prov.STRATEGY_MULTIVIEW!r})")
+    except (InsufficientRAMError, MemoryError) as exc:
+        force_cleanup()
+        logger.error("Memory safety guard triggered: %s", exc)
+        return _build_ram_fallback_record(inspections, inspection_id, architecture, str(exc))
+    finally:
+        force_cleanup()
 
 
 def _execute_single(

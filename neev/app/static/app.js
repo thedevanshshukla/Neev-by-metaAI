@@ -541,14 +541,19 @@ async function executeScreeningWorkflow() {
       wonder_mode: AppState.upload.wonderMode || "advisory",
     };
 
-    await api(`/inspections/${encodeURIComponent(inspectionId)}/run`, {
+    const runRes = await api(`/inspections/${encodeURIComponent(inspectionId)}/run`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(runPayload),
     });
 
-    showToast("Screening completed successfully!");
-    if (progressMsg) progressMsg.textContent = "Screening complete!";
+    if (runRes && runRes.status === "insufficient_ram") {
+      showToast("⚠️ Not enough RAM available: server freed memory and remains online.", 7000);
+      if (progressMsg) progressMsg.textContent = "Halted safely: Not enough RAM available (4GB peak ceiling reached).";
+    } else {
+      showToast("Screening completed successfully!");
+      if (progressMsg) progressMsg.textContent = "Screening complete!";
+    }
 
     // Invalidate cached inspection data to ensure fresh load
     AppState.inspectionData = null;
@@ -718,6 +723,15 @@ function computeInferenceStatus(data) {
     (w.check === "min_side" || w.check === "laplacian_var") && String(w.detail || "").toLowerCase().includes("severe")
   );
 
+  if (status === "insufficient_ram") {
+    return {
+      status: "insufficient_ram",
+      label: "NOT ENOUGH RAM",
+      badgeClass: "badge-warning",
+      desc: data.error || "Not enough RAM available (peaked near 4GB limit). The server safely halted inference and remains fully online. Recommendation: Rescan with Single View or a smaller photo."
+    };
+  }
+
   if (status === "failed" || hasSevereQuality) {
     return {
       status: "cannot_infer",
@@ -790,8 +804,24 @@ function renderInspectionMetadata(data) {
   }
 
   const statusBadge = document.getElementById("exp-status-badge");
-  statusBadge.textContent = (data.status || "complete").toUpperCase();
-  statusBadge.className = data.status === "complete" ? "badge badge-success" : "badge badge-warning";
+  if (data.status === "insufficient_ram") {
+    statusBadge.textContent = "RAM LIMIT REACHED";
+    statusBadge.className = "badge badge-warning";
+  } else {
+    statusBadge.textContent = (data.status || "complete").toUpperCase();
+    statusBadge.className = data.status === "complete" ? "badge badge-success" : "badge badge-warning";
+  }
+
+  // Manage dedicated RAM Guard warning banner
+  const ramBanner = document.getElementById("ram-warning-banner");
+  if (ramBanner) {
+    if (data.status === "insufficient_ram") {
+      ramBanner.style.display = "block";
+      ramBanner.innerHTML = `<strong>⚠️ Not Enough RAM Available:</strong> ${esc(data.error || "The 4 GB peak memory limit was reached during high-resolution processing.")} The server safely reclaimed memory and remains online. <em>Tip: Switch to Single View or rescan with a smaller photo.</em>`;
+    } else {
+      ramBanner.style.display = "none";
+    }
+  }
 
   // Action links
   const reportBtn = document.getElementById("exp-btn-report");

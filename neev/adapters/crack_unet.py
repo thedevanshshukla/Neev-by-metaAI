@@ -144,9 +144,18 @@ class CrackUNetAdapter:
                 x_starts.append(eff_w - self.settings.inference.patch_size)
             n_tiles = len(y_starts) * len(x_starts)
 
-        probs, binary, crack_ratio = self.predictor.predict_large_image(
-            proc_rgb, threshold=threshold, overlap=eff_overlap
-        )
+        from neev.app.memory_guard import check_ram_headroom, force_cleanup, InsufficientRAMError
+        check_ram_headroom(estimated_need_mb=150.0)
+
+        try:
+            probs, binary, crack_ratio = self.predictor.predict_large_image(
+                proc_rgb, threshold=threshold, overlap=eff_overlap
+            )
+        except (MemoryError, Exception) as exc:
+            if "out of memory" in str(exc).lower() or isinstance(exc, MemoryError):
+                force_cleanup()
+                raise InsufficientRAMError(f"Insufficient RAM available for neural inference: {exc}") from exc
+            raise
         latency = time.perf_counter() - t0
 
         instances = []
