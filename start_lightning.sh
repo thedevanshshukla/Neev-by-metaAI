@@ -26,3 +26,4 @@ echo "  1. Open the 'Port viewer' plugin in the right panel"
 echo "  2. Enter Port: 8000 and switch to 'Public'"
 echo "  3. Open your public HTTPS link"
 echo "=========================================================="
+

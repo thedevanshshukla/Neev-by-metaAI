@@ -27,14 +27,42 @@ Write-Host "Neev API server running on http://localhost:8000 (PID: $($uvicornPro
 # Start Cloudflared tunnel
 if (Test-Path ".\cloudflared.exe") {
     Write-Host "Starting Cloudflare 24/7 public tunnel..." -ForegroundColor Cyan
-    Start-Process -FilePath ".\cloudflared.exe" -ArgumentList "tunnel --url http://localhost:8000" -NoNewWindow
+    $cfLog = "$PSScriptRoot\cloudflared.log"
+    Remove-Item $cfLog -ErrorAction SilentlyContinue
+    $cfProcess = Start-Process -FilePath ".\cloudflared.exe" -ArgumentList "tunnel --url http://localhost:8000" -RedirectStandardError $cfLog -PassThru -NoNewWindow
+    
+    $publicUrl = "Waiting for tunnel connection..."
+    for ($i = 0; $i -lt 15; $i++) {
+        Start-Sleep -Seconds 1
+        if (Test-Path $cfLog) {
+            $match = Select-String -Path $cfLog -Pattern "https://[a-zA-Z0-9-]+\.trycloudflare\.com"
+            if ($match) {
+                $publicUrl = $match.Matches[0].Value
+                break
+            }
+        }
+    }
 } else {
     Write-Host "cloudflared.exe not found in directory. Running locally on port 8000 only." -ForegroundColor Yellow
+    $publicUrl = "Not available (cloudflared.exe missing)"
 }
 
 Write-Host "`n==========================================================================" -ForegroundColor Yellow
 Write-Host "  NEEV IS ACTIVE 24/7 ON YOUR LAPTOP WITH 4 GB RAM CEILING" -ForegroundColor Yellow
 Write-Host "  - Local URL:   http://localhost:8000" -ForegroundColor White
+Write-Host "  - Public URL:  $publicUrl" -ForegroundColor Green
 Write-Host "  - Never-Sleep: Laptop lid can be closed without interrupting server" -ForegroundColor White
 Write-Host "  - RAM Guard:   If memory nears 4GB, server stays online with alert banner" -ForegroundColor White
 Write-Host "==========================================================================" -ForegroundColor Yellow
+Write-Host "`nServer is running. Minimize this window to keep it running in background." -ForegroundColor Cyan
+Write-Host "Press Ctrl+C to stop the server.`n" -ForegroundColor Gray
+
+# Keep script running to maintain child processes
+try {
+    Wait-Process -Id $uvicornProcess.Id
+} finally {
+    if ($cfProcess -and -not $cfProcess.HasExited) {
+        Stop-Process -Id $cfProcess.Id -Force -ErrorAction SilentlyContinue
+    }
+}
+
